@@ -42,8 +42,7 @@ public class Chocolate {
 
 			}
 		}
-		if (i >= 2 && i < board.BOARDSIZE-2 && candies[i-1][j] != null && candies[i-2][j] != null && candies[i+1][j] != null && candies[i+2][j] != null
-				&& candies[i-1][j].getColor() != -10 && candies[i-2][j].getColor() != -10 && candies[i+1][j].getColor() != -10 && candies[i+2][j].getColor() != -10){//
+		if (i >= 2 && i < board.BOARDSIZE-2 && candies[i-1][j] != null && candies[i-2][j] != null && candies[i+1][j] != null && candies[i+2][j] != null){//
 			if (candy.getColor() == candies[i-1][j].getColor() && candy.getColor() == candies[i-2][j].getColor() && candy.getColor() == candies[i+1][j].getColor() && candy.getColor() == candies[i+2][j].getColor()){
 				int savedColor = candies[i][j].getColor();
 				if (candies[i][j] != null) candies[i][j].crush();
