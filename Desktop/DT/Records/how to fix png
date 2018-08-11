@@ -1,0 +1,200 @@
+Last login: Tue Jun  5 14:46:23 on ttys000
+8afbfe05:~ BaoHan$ cd desktop
+8afbfe05:desktop BaoHan$ ls
+--                       New Folder With Items    ~$10wk_Week_5 2017.xlsx
+0.0                      beifen                   ~$Driver.xlsx
+10pre                    computation and language ~$atistic Analyze.docx
+4102                     nottingham               ~$p4.docx
+4402                     print                    ~$report.docx
+5012                     st-andrews               未命名文件夹
+DT                       untitled folder
+Data Analysis            wechat
+8afbfe05:desktop BaoHan$ cd DT
+8afbfe05:DT BaoHan$ ls
+Eclipse.app     Records         minion-1.8      timeline.xlsx
+MatchThree      material        new             ~$timeline.xlsx
+8afbfe05:DT BaoHan$ cd MatchThree/
+8afbfe05:MatchThree BaoHan$ ls
+bin    images src
+8afbfe05:MatchThree BaoHan$ cd src
+8afbfe05:src BaoHan$ ls
+Board.java        Candy.java        Main.java         XCandy.java
+BoardGui.java     Game.java         RegularCandy.java YCandy.java
+8afbfe05:src BaoHan$ javac Main.java
+8afbfe05:src BaoHan$ cd ../images/
+8afbfe05:images BaoHan$ pngcheck
+-bash: pngcheck: command not found
+8afbfe05:images BaoHan$ brew
+Example usage:
+  brew search [TEXT|/REGEX/]
+  brew (info|home|options) [FORMULA...]
+  brew install FORMULA...
+  brew update
+  brew upgrade [FORMULA...]
+  brew uninstall FORMULA...
+  brew list [FORMULA...]
+
+Troubleshooting:
+  brew config
+  brew doctor
+  brew install -vd FORMULA
+
+Brewing:
+  brew create [URL [--no-fetch]]
+  brew edit [FORMULA...]
+  https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Formula-Cookbook.md
+
+Further help:
+  man brew
+  brew help [COMMAND]
+  brew home
+8afbfe05:images BaoHan$ brew install pngcheck
+Warning: You are using OS X 10.13.
+We do not provide support for this pre-release version.
+You may encounter build failures or other breakages.
+Please create pull-requests instead of filing issues.
+==> Downloading https://downloads.sourceforge.net/project/png-mng/pngcheck/2.3.0
+==> Downloading from https://kent.dl.sourceforge.net/project/png-mng/pngcheck/2.
+######################################################################## 100.0%
+==> make -f Makefile.unx ZINC= ZLIB=-lz
+🍺  /usr/local/Cellar/pngcheck/2.3.0_1: 6 files, 149.8K, built in 6 seconds
+8afbfe05:images BaoHan$ pngcheck 
+MIT.jpg                  greenVStripped.png       purpleHStripped.png
+background_intro.png     greenWrapped.png         purpleHint.jpg
+background_level.jpg     icon.png                 purpleVStripped.png
+background_level.png     iut.PNG                  purpleWrapped.png
+background_map.png       jelly.png                redCandy.png
+bg_intro.png             menuBackground.jpg       redHStripped.png
+block.png                mit.png                  redHint.jpg
+blueCandy.png            nothing - copia (2).png  redVStripped.png
+blueHStripped.png        nothing - copia.png      redWrapped.png
+blueHint.jpg             nothing.png              three.png
+blueVStripped.png        one.png                  transparent.png
+blueWrapped.png          orangeCandy.png          two.png
+bomb.png                 orangeHStripped.png      wall.png
+five.png                 orangeHint.jpg           yellowCandy.png
+four.png                 orangeVStripped.png      yellowHStripped.png
+greenCandy.png           orangeWrapped.png        yellowHint.jpg
+greenHStripped.png       playButton.png           yellowVStripped.png
+greenHint.jpg            purpleCandy.png          yellowWrapped.png
+8afbfe05:images BaoHan$ pngcheck orangeVStripped.png 
+orangeVStripped.png  CRC error in chunk IDAT (computed 4d718b3d, expected 00000000)
+ERROR: orangeVStripped.png
+8afbfe05:images BaoHan$ pngcheck blueVStripped.png 
+OK: blueVStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 35.1%).
+8afbfe05:images BaoHan$ pngcheck *.png
+OK: background_intro.png (1024x560, 32-bit RGB+alpha, interlaced, 55.4%).
+OK: background_level.png (585x588, 32-bit RGB+alpha, interlaced, 54.7%).
+OK: background_map.png (1024x560, 32-bit RGB+alpha, interlaced, 69.8%).
+OK: bg_intro.png (768x768, 24-bit RGB, non-interlaced, 88.9%).
+OK: block.png (65x65, 32-bit RGB+alpha, interlaced, 32.4%).
+OK: blueCandy.png (65x65, 32-bit RGB+alpha, non-interlaced, 34.1%).
+OK: blueHStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 35.8%).
+OK: blueVStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 35.1%).
+OK: blueWrapped.png (65x65, 32-bit RGB+alpha, non-interlaced, 33.8%).
+OK: bomb.png (65x65, 32-bit RGB+alpha, non-interlaced, 25.4%).
+OK: five.png (29x35, 16-bit grayscale+alpha, interlaced, -8.0%).
+OK: four.png (29x34, 16-bit grayscale+alpha, interlaced, -5.2%).
+OK: greenCandy.png (65x65, 32-bit RGB+alpha, non-interlaced, 47.8%).
+OK: greenHStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 44.1%).
+OK: greenVStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 42.3%).
+OK: greenWrapped.png (65x65, 32-bit RGB+alpha, non-interlaced, 37.1%).
+OK: icon.png (96x96, 32-bit RGB+alpha, non-interlaced, 42.9%).
+OK: jelly.png (65x65, 24-bit RGB, non-interlaced, 35.6%).
+OK: mit.png (3536x2240, 32-bit RGB+alpha, non-interlaced, 57.9%).
+OK: nothing - copia (2).png (65x65, 32-bit RGB+alpha, interlaced, 82.3%).
+OK: nothing - copia.png (65x65, 24-bit RGB, non-interlaced, 77.3%).
+OK: nothing.png (65x65, 32-bit RGB+alpha, interlaced, 82.3%).
+OK: one.png (20x34, 16-bit grayscale+alpha, interlaced, -37.3%).
+OK: orangeCandy.png (65x65, 32-bit RGB+alpha, non-interlaced, 49.8%).
+OK: orangeHStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 47.3%).
+orangeVStripped.png  CRC error in chunk IDAT (computed 4d718b3d, expected 00000000)
+ERROR: orangeVStripped.png
+OK: orangeWrapped.png (65x65, 32-bit RGB+alpha, non-interlaced, 37.6%).
+OK: playButton.png (290x129, 32-bit RGB+alpha, interlaced, 53.4%).
+OK: purpleCandy.png (65x65, 32-bit RGB+alpha, non-interlaced, 37.7%).
+OK: purpleHStripped.png (67x65, 32-bit RGB+alpha, non-interlaced, 35.4%).
+OK: purpleVStripped.png (67x65, 32-bit RGB+alpha, non-interlaced, 38.0%).
+OK: purpleWrapped.png (65x65, 32-bit RGB+alpha, non-interlaced, 34.7%).
+OK: redCandy.png (65x65, 32-bit RGB+alpha, non-interlaced, 44.5%).
+OK: redHStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 45.3%).
+OK: redVStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 44.4%).
+OK: redWrapped.png (65x65, 32-bit RGB+alpha, non-interlaced, 36.1%).
+three.png  this is neither a PNG or JNG image nor a MNG stream
+ERROR: three.png
+OK: transparent.png (65x65, 32-bit RGB+alpha, non-interlaced, 82.9%).
+OK: two.png (29x35, 16-bit grayscale+alpha, interlaced, -11.5%).
+OK: wall.png (65x65, 24-bit RGB, non-interlaced, 98.5%).
+OK: yellowCandy.png (65x65, 32-bit RGB+alpha, non-interlaced, 44.5%).
+OK: yellowHStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 45.1%).
+OK: yellowVStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 43.7%).
+OK: yellowWrapped.png (65x65, 32-bit RGB+alpha, non-interlaced, 37.7%).
+
+Errors were detected in 2 of the 44 files tested.
+No errors were detected in 42 of the 44 files tested.
+8afbfe05:images BaoHan$ png
+png-fix-IDAT-windowsize  pngcheck                 pngsplit
+png-fix-itxt             pngfix                   
+8afbfe05:images BaoHan$ pngfix orange
+pngfix needs libpng with a zlib >=1.2.4 (not 0x1230)
+8afbfe05:images BaoHan$ pngfix orangeH
+orangeHStripped.png  orangeHint.jpg       
+8afbfe05:images BaoHan$ pngfix orangeHStripped.png 
+pngfix needs libpng with a zlib >=1.2.4 (not 0x1230)
+8afbfe05:images BaoHan$ pngfix orangeStripped.png 
+pngfix needs libpng with a zlib >=1.2.4 (not 0x1230)
+8afbfe05:images BaoHan$ pngfix orangeStripped.png 
+8afbfe05:images BaoHan$ open .
+8afbfe05:images BaoHan$ pngcheck ~/Desktop/orangeVStripped.png 
+OK: /Users/BaoHan/Desktop/orangeVStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 63.4%).
+8afbfe05:images BaoHan$ mv ~/Desktop/orangeVStripped.png .
+8afbfe05:images BaoHan$ pngcheck *.png
+OK: background_intro.png (1024x560, 32-bit RGB+alpha, interlaced, 55.4%).
+OK: background_level.png (585x588, 32-bit RGB+alpha, interlaced, 54.7%).
+OK: background_map.png (1024x560, 32-bit RGB+alpha, interlaced, 69.8%).
+OK: bg_intro.png (768x768, 24-bit RGB, non-interlaced, 88.9%).
+OK: block.png (65x65, 32-bit RGB+alpha, interlaced, 32.4%).
+OK: blueCandy.png (65x65, 32-bit RGB+alpha, non-interlaced, 34.1%).
+OK: blueHStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 35.8%).
+OK: blueVStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 35.1%).
+OK: blueWrapped.png (65x65, 32-bit RGB+alpha, non-interlaced, 33.8%).
+OK: bomb.png (65x65, 32-bit RGB+alpha, non-interlaced, 25.4%).
+OK: five.png (29x35, 16-bit grayscale+alpha, interlaced, -8.0%).
+OK: four.png (29x34, 16-bit grayscale+alpha, interlaced, -5.2%).
+OK: greenCandy.png (65x65, 32-bit RGB+alpha, non-interlaced, 47.8%).
+OK: greenHStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 44.1%).
+OK: greenVStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 42.3%).
+OK: greenWrapped.png (65x65, 32-bit RGB+alpha, non-interlaced, 37.1%).
+OK: icon.png (96x96, 32-bit RGB+alpha, non-interlaced, 42.9%).
+OK: jelly.png (65x65, 24-bit RGB, non-interlaced, 35.6%).
+OK: mit.png (3536x2240, 32-bit RGB+alpha, non-interlaced, 57.9%).
+OK: nothing - copia (2).png (65x65, 32-bit RGB+alpha, interlaced, 82.3%).
+OK: nothing - copia.png (65x65, 24-bit RGB, non-interlaced, 77.3%).
+OK: nothing.png (65x65, 32-bit RGB+alpha, interlaced, 82.3%).
+OK: one.png (20x34, 16-bit grayscale+alpha, interlaced, -37.3%).
+OK: orangeCandy.png (65x65, 32-bit RGB+alpha, non-interlaced, 49.8%).
+OK: orangeHStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 47.3%).
+OK: orangeVStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 63.4%).
+OK: orangeWrapped.png (65x65, 32-bit RGB+alpha, non-interlaced, 37.6%).
+OK: playButton.png (290x129, 32-bit RGB+alpha, interlaced, 53.4%).
+OK: purpleCandy.png (65x65, 32-bit RGB+alpha, non-interlaced, 37.7%).
+OK: purpleHStripped.png (67x65, 32-bit RGB+alpha, non-interlaced, 35.4%).
+OK: purpleVStripped.png (67x65, 32-bit RGB+alpha, non-interlaced, 38.0%).
+OK: purpleWrapped.png (65x65, 32-bit RGB+alpha, non-interlaced, 34.7%).
+OK: redCandy.png (65x65, 32-bit RGB+alpha, non-interlaced, 44.5%).
+OK: redHStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 45.3%).
+OK: redVStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 44.4%).
+OK: redWrapped.png (65x65, 32-bit RGB+alpha, non-interlaced, 36.1%).
+three.png  this is neither a PNG or JNG image nor a MNG stream
+ERROR: three.png
+OK: transparent.png (65x65, 32-bit RGB+alpha, non-interlaced, 82.9%).
+OK: two.png (29x35, 16-bit grayscale+alpha, interlaced, -11.5%).
+OK: wall.png (65x65, 24-bit RGB, non-interlaced, 98.5%).
+OK: yellowCandy.png (65x65, 32-bit RGB+alpha, non-interlaced, 44.5%).
+OK: yellowHStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 45.1%).
+OK: yellowVStripped.png (65x65, 32-bit RGB+alpha, non-interlaced, 43.7%).
+OK: yellowWrapped.png (65x65, 32-bit RGB+alpha, non-interlaced, 37.7%).
+
+Errors were detected in 1 of the 44 files tested.
+No errors were detected in 43 of the 44 files tested.
+8afbfe05:images BaoHan$ 

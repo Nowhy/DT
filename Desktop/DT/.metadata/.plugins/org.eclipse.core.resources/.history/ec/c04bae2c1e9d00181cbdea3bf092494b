@@ -1,0 +1,53 @@
+import java.util.*;
+
+public class MCTSAI {
+	Game game;
+	Board board;
+	Board tempBoard;
+	int tempI = -1;
+	int tempJ = -1;
+	
+	int tempM = -1;
+	int tempN = -1;
+	
+	MCTSAI(Game game){
+		this.game = game;
+	}
+	
+	void play(){
+		board = game.getBoard();
+		int score = board.getScore();
+		int tempScore = score;
+		tempBoard = new Board(board);
+		tempI = -1;
+		tempJ = -1;
+		tempM = -1;
+		tempN = -1;
+	}
+	
+	public void makeTransition(int i, int j, int m, int n, Board oldboard) {
+        tempBoard = new Board(oldboard);
+        tempBoard.setFirstCandy(i, j);
+        tempBoard.setSelectedFirst();
+        tempBoard.move(m, n);
+    }
+	
+	public Board simulationTransition(Set<Board> possibleTransitions) {
+		List<Board> transitions = new ArrayList<Board>(possibleTransitions);
+		return transitions.get((int) Math.floor(Math.random() * possibleTransitions.size()));
+	}
+	
+	public Set<Board> getPossibleTransitions() {
+    	Set<Board> moves = new HashSet<Board>();
+        for (int i = 0; i < board.BOARDSIZE; i++) {
+            for (int j = 0; j < board.BOARDSIZE; j++) {
+            		if(board.getCandies()[i][j]!=null && board.getCandies()[i-1][j]!=null 
+            				&& board.getCandies()[i][j].getColor() != -10 && board.getCandies()[i-1][j].getColor() != -10) {
+            		}
+             
+            }
+        }
+        return moves;
+    }
+
+}

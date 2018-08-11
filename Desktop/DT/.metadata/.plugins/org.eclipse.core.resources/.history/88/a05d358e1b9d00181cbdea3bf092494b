@@ -1,0 +1,11 @@
+
+public class MCTSAI {
+
+	MCTSAI(Game game){
+		
+	}
+	
+	play(){
+		
+	}
+}

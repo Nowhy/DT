@@ -1,0 +1,31 @@
+
+public class MCTSAI {
+	Game game;
+	Board board;
+	Board tempBoard;
+	int tempI = -1;
+	int tempJ = -1;
+	
+	int tempM = -1;
+	int tempN = -1;
+	
+	MCTSAI(Game game){
+		this.game = game;
+	}
+	
+	void play(){
+		board = game.getBoard();
+		int score = board.getScore();
+		int tempScore = score;
+		tempBoard = new Board(board);
+		tempI = -1;
+		tempJ = -1;
+		tempM = -1;
+		tempN = -1;
+		for(int i = board.BOARDSIZE-1; i >= 0; i--) {
+			for(int j = board.BOARDSIZE-1; j >= 0; j--) {
+				
+			}
+		}
+	}
+}

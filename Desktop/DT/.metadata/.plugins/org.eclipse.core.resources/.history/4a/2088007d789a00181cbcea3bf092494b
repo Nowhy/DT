@@ -1,0 +1,76 @@
+public class BombCandy extends Candy {
+
+	public BombCandy(int color, Board board,int row,int column) {
+		super(color, board,row,column);		
+	}
+
+	@Override
+	public void crush() {
+		if (!wasCrushed){	
+			
+			wasCrushed=true;
+			
+			if (row >= 1 && column >= 1 && this.getBoard().getCandies()[row-1][column-1]!=null) {
+				this.getBoard().getCandies()[row-1][column-1].crush();
+			}
+			if (row >= 1 && this.getBoard().getCandies()[row-1][column]!=null) {
+				this.getBoard().getCandies()[row-1][column].crush();
+			}
+			if (row >= 1 && column <= getBoard().BOARDSIZE - 1 && this.getBoard().getCandies()[row-1][column+1]!=null) {
+				this.getBoard().getCandies()[row-1][column+1].crush();
+			}
+			if (column >= 1 && this.getBoard().getCandies()[row][column-1]!=null) {
+				this.getBoard().getCandies()[row][column-1].crush();
+			}
+			if (column <= getBoard().BOARDSIZE - 1 && this.getBoard().getCandies()[row][column+1]!=null) {
+				this.getBoard().getCandies()[row][column+1].crush();
+			}
+			if (row < getBoard().BOARDSIZE - 1 && column >= 1 && this.getBoard().getCandies()[row+1][column-1]!=null) {
+				this.getBoard().getCandies()[row+1][column-1].crush();
+			}
+			if (row < getBoard().BOARDSIZE - 1 && this.getBoard().getCandies()[row+1][column]!=null) {
+				this.getBoard().getCandies()[row+1][column].crush();
+			}
+			if (row < getBoard().BOARDSIZE - 1 && column <= getBoard().BOARDSIZE - 1 && this.getBoard().getCandies()[row+1][column+1]!=null) {
+				this.getBoard().getCandies()[row+1][column+1].crush();
+			}
+					
+			while(!this.getBoard().isNONullCandy()) {
+				this.getBoard().addRandomCandy(this.getBoard().METHOD);
+				this.getBoard().checkChainReaction(0);
+			}
+			
+			this.getBoard().getCandies()[row][column] = null;
+			
+			if (row >= 1 && column >= 1 && this.getBoard().getCandies()[row-1][column-1] != null) {
+				this.getBoard().getCandies()[row-1][column-1].crush();
+			}
+			if (row >= 1 && this.getBoard().getCandies()[row-1][column] != null) {
+				this.getBoard().getCandies()[row-1][column].crush();
+			}
+			if (row >= 1 && column <= getBoard().BOARDSIZE- 1 && this.getBoard().getCandies()[row-1][column+1] != null) {
+				this.getBoard().getCandies()[row-1][column+1].crush();
+			}
+			if (column >= 1 && this.getBoard().getCandies()[row][column-1] != null) {
+				this.getBoard().getCandies()[row][column-1].crush();
+			}
+			if (column < getBoard().BOARDSIZE - 1 && this.getBoard().getCandies()[row][column+1] != null) {
+				this.getBoard().getCandies()[row][column+1].crush();
+			}
+			if (row < getBoard().BOARDSIZE - 1 && column >= 1 && this.getBoard().getCandies()[row+1][column-1] != null) {
+				this.getBoard().getCandies()[row+1][column-1].crush();
+			}
+			if (row < getBoard().BOARDSIZE - 1 && this.getBoard().getCandies()[row+1][column] != null) {
+				this.getBoard().getCandies()[row+1][column].crush();
+			}
+			if (row < getBoard().BOARDSIZE - 1 && column< getBoard().BOARDSIZE - 1 && this.getBoard().getCandies()[row+1][column+1] != null) {
+				this.getBoard().getCandies()[row+1][column+1].crush();
+			}
+			
+			this.getBoard().updateScore(540);
+		}
+	}
+	
+	
+	
+}
