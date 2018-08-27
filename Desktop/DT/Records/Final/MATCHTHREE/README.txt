@@ -1,11 +1,19 @@
 Please as following step:
+
+Java files:
 1. Open cmd / terminal in your computer.
 2. Go to the location of this file. Eg. cd filepath/Final/MATCHTHREE
 3. Check "javac" is working in your terminal or cmd.
 4. Run "javac Main.java"
 5. Then run "java Main"
 
+Other files:
+1. check "python" is working in your terminal or cmd.
+2. Run "python training.py"
+
 =================================================
+Java Files Explanation:
+
 Main.java controls the whole game.
 
 Game.java contains a board and a responding GUI.
@@ -41,3 +49,13 @@ level0.txt, level1.txt, level2.txt, level3.txt, level4.txt: These boards are cop
 level5.txt, level6.txt, level7.txt, level8.txt, level9.txt: These boards are totally random boards and generated from this application.
 
 log.txt would record the time spent and the final score obtained by players.
+
+=============================================================================
+Other files:
+
+player1_XXX.txt... player13_XXX.txt are the records of 13 participants.
+
+experiment.ods contains all data collected and then analyzes these data.
+
+training.py shows the results using Supported Vector Clustering.
+
