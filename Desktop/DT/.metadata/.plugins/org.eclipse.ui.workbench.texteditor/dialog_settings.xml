@@ -2,29 +2,31 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="printBoard" key="selection"/>
+		<item value="seed" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="getChocolateNUM"/>
+			<item value="seed"/>
+			<item value="method"/>
+			<item value="METHOD"/>
+			<item value="FirstCandy"/>
+			<item value="firstCandy"/>
+			<item value="//"/>
+			<item value="two spe"/>
+			<item value="score"/>
+			<item value="print"/>
 			<item value="printBoard"/>
-			<item value="System.out.print"/>
-			<item value="reDraw"/>
-			<item value="move"/>
-			<item value="writeFile"/>
-			<item value="update"/>
-			<item value="XCandy"/>
-			<item value="isValid"/>
-			<item value="bomb"/>
-			<item value="&lt;= getBoard"/>
-			<item value="column&lt;"/>
-			<item value="column &lt;"/>
-			<item value="startTime"/>
-			<item value="file"/>
-			<item value="filename"/>
+			<item value="reDrawBoard"/>
+			<item value="color"/>
+			<item value="System.out.p"/>
+			<item value="system.out.p"/>
 		</list>
 		<list key="replacehistory">
+			<item value="colour"/>
+			<item value="candy"/>
 			<item value="column1"/>
 			<item value="row1"/>
 			<item value=" != null"/>
@@ -38,8 +40,6 @@
 			<item value="board"/>
 			<item value="candies[i][j] = new BombCandy(savedColor,board,i,j);"/>
 			<item value="int savedColor = candies[i][j].getColor();"/>
-			<item value=") == can"/>
-			<item value="] != null"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

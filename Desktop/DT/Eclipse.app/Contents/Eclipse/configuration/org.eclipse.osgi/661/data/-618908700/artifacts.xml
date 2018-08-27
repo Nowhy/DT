@@ -2,7 +2,7 @@
 <?artifactRepository version='1.1.0'?>
 <repository name='/Users/BaoHan/.p2/pool/.eclipseextension' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
   <properties size='1'>
-    <property name='p2.timestamp' value='1534028189302'/>
+    <property name='p2.timestamp' value='1535212341003'/>
   </properties>
   <mappings size='3'>
     <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>

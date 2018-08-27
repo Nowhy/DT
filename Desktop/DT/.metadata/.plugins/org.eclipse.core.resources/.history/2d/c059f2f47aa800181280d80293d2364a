@@ -1,0 +1,30 @@
+import java.util.Random;
+
+public class ChocolateCandy extends Candy {
+
+	public ChocolateCandy(int colour, Board board,int row,int column) {
+		super(-1, board,row,column);		
+	}
+
+	@Override
+	public void crush() {
+		if (!wasCrushed){	
+			
+			wasCrushed = true;
+			this.board.getCandies()[row][column] = null;
+			Random random = new Random(1000);
+			int seed = (int) System.currentTimeMillis();
+			int m = Math.abs(random.nextInt(seed) % 7);
+			for (int i = 0; i < board.BOARDSIZE-1; i++){
+				for (int j = 0; j < board.BOARDSIZE-1; j++){
+					if (board.getCandies()[i][j] != null && board.getCandies()[i][j].getcolour() != -10 && board.getCandies()[i][j].getcolour() == m) {
+						board.getCandies()[i][j].crush();
+					}
+				}
+			}
+			board.updateScore(60);
+
+		}
+	}
+
+}

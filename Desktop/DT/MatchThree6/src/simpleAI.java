@@ -56,7 +56,7 @@ public class simpleAI {
 		}
 		
 		
-		System.out.println(game.getBoard().getScore() + "   " + tempI + "   " + tempJ + "   " + tempM + "   " +tempN);
+//		System.out.println(game.getBoard().getScore() + "   " + tempI + "   " + tempJ + "   " + tempM + "   " +tempN);
 		// no valid move
 		if(tempI == -1 && tempJ == -1) {
 			for(int i = 0; i < board.BOARDSIZE; i++) {
@@ -70,14 +70,14 @@ public class simpleAI {
 				board.addRandomCandy(board.METHOD);
 				board.checkChainReaction(0);
 			}
-			System.out.println("repaint....");
+//			System.out.println("repaint....");
 			play();
 		}else {
 			game.getBoard().setSelectedFirst();
 			game.getBoard().setFirstCandy(tempM, tempN);
 			game.getBoard().move(tempI, tempJ);
-			game.getBoard().printBoard();
-			game.reDrawBoard();
+//			game.getBoard().printBoard();
+//			game.reDrawBoard();
 			
 		}
 

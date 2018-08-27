@@ -1,0 +1,53 @@
+import java.io.IOException;
+
+import javax.swing.JOptionPane;
+
+public class Main {
+	
+	
+	public static void main(String args[]) throws IOException { 
+		// args: METHOD(1,2,3)  STRATEGY(Score first(1), chocolate first (2) five first (3), four first (4)) Level
+		int METHOD = Integer.parseInt(args[0]);
+		int STRATEGY = Integer.parseInt(args[1]) ;
+		int LEVEL = 3;
+		Game game = new Game(METHOD, STRATEGY, LEVEL);
+		simpleAI simple = new simpleAI(game);
+		testSimpleAI(game, simple, METHOD, STRATEGY, LEVEL);
+		while(LEVEL<=9) {
+			int i = 0;
+			int winTimes = 0;
+			long startTime = System.currentTimeMillis(); 
+			while(i < 100) {
+				if(game.getBoard().getScore() >= game.getBoard().TARGET) {
+					winTimes++;
+				}
+				i++;
+				game = null;
+				game = new Game(METHOD, STRATEGY, LEVEL);
+				simple = new simpleAI(game);
+				testSimpleAI(game, simple, METHOD, STRATEGY, LEVEL);
+			}
+			long endTime = System.currentTimeMillis(); 
+			long running = endTime - startTime;
+			LEVEL++;
+			System.out.println(winTimes);
+			System.out.println("winrate of Level " + LEVEL + "  is " + (double)(winTimes/100.0));
+			System.out.println("total time for Level " + LEVEL + "  is " + (double) (Math.round(running*10000)/10000.0));
+			
+		}
+	}
+
+		
+		public static void testSimpleAI(Game game, simpleAI simple, int METHOD, int STRATEGY, int LEVEL) {
+			long startTime = System.nanoTime(); 
+			while(game.getBoard().STEP  > 0) {
+				simple.play();
+				game.upateStep(game.getBoard().STEP-1);
+			}
+			long endTime = System.nanoTime(); 
+			float running = (endTime - startTime)/1000000;//hao miao
+			game.writeFile("LEVEL "+ LEVEL + " FINISH!" + "\r\nTIME: "+ endTime + "\r\n");
+			game.writeFile("Score "+ game.getBoard().getScore() + " " + "    RUNNING TIME: "+ running+" ms\r\n\r\n");
+	}
+
+}

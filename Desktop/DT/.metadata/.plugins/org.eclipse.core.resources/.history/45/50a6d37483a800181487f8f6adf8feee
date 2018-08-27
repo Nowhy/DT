@@ -1,0 +1,209 @@
+import java.util.*;
+
+public class simpleAI2 {
+	private Game game;
+	private Board board;
+	Board tempBoard;
+	Board testBoard;
+	int tempScore;
+	int tempI = -1;
+	int tempJ = -1;
+	
+	int tempM = -1;
+	int tempN = -1;
+	int repeatScore = 0;
+	int repeatChocolate = 0;
+	int repeatFive = 0;
+	int repeatFour = 0;
+	
+	
+	simpleAI2(Game game){
+		this.game = game;
+	}
+	
+	// NewObject<i, j, m, n, board, score>
+	public void play() {
+		board = game.getBoard();
+		int score = board.getScore();
+		int tempScore = score;
+		tempBoard = new Board(board);
+		tempI = -1;
+		tempJ = -1;
+		tempM = -1;
+		tempN = -1;
+		int stepNUM = board.STEP;
+		if(game.STRATEGY == 1) {
+			String moveID = ScoreFirstHeuristic(stepNUM);
+			String[] tempIJMN = moveID.split(",");
+			tempI = Integer.parseInt(tempIJMN[0]);
+			tempI = Integer.parseInt(tempIJMN[1]);
+			tempI = Integer.parseInt(tempIJMN[2]);
+			tempI = Integer.parseInt(tempIJMN[3]);
+		}
+		
+		
+//		System.out.println(game.getBoard().getScore() + "   " + tempI + "   " + tempJ + "   " + tempM + "   " +tempN);
+		// no valid move
+		if(tempI == -1 && tempJ == -1) {
+			for(int i = 0; i < board.BOARDSIZE; i++) {
+				for(int j = 0; j < board.BOARDSIZE; j++) {
+					if(board.getCandies()[i][j] != null && board.getCandies()[i][j].getcolour() != -10) {
+						board.getCandies()[i][j] = null;
+					}
+				}
+			}
+			while(!board.isNONullCandy()) {
+				board.addRandomCandy(board.METHOD);
+				board.checkChainReaction(0);
+			}
+//			System.out.println("repaint....");
+			play();
+		}else {
+			game.getBoard().setSelectedFirst();
+			game.getBoard().setFirstCandy(tempM, tempN);
+			game.getBoard().move(tempI, tempJ);
+//			game.getBoard().printBoard();
+//			game.reDrawBoard();
+			
+		}
+
+	}
+	
+	public void update(int a, int b, int c, int d) {
+		tempScore = testBoard.getScore();
+		tempBoard = new Board(testBoard);
+		setTempI(a);
+		setTempJ(b);
+		setTempM(c);
+		setTempN(d);
+	}
+
+	public String ScoreFirstHeuristic(int stepNUM) {
+		
+		Map<String, ArrayList<String>> history = new HashMap<String, ArrayList<String>>();
+		Map<String, Integer> scoreList = new HashMap<String, Integer>();
+			for(int i = board.BOARDSIZE-1 ; i >=0; i--) {
+				for(int j = board.BOARDSIZE-1 ; j >=0; j--) {
+					if(j != 0) {
+						String temp = "i,j,i,j-1";
+						history.put(temp, new ArrayList<String>());
+						scoreList.put(temp, tempScore);
+						repeatForTwenty(i,j,i,j-1);
+					}	
+					if(i != 0) {
+						String temp = "i,j,i-1,j";
+						history.put(temp, new ArrayList<String>());
+						scoreList.put(temp, tempScore);
+						repeatForTwenty(i,j,i-1,j);
+					}
+				}	
+			}
+			
+
+			List<Map.Entry<String, Integer>> infoIds =
+				    new ArrayList<Map.Entry<String, Integer>>(map.entrySet());
+			
+			Collections.sort(scoreList, new Comparator<Map.Entry<String, Integer>>() {
+				public int compare(Map.Entry<String, Integer> o1,
+						Map.Entry<String, Integer> o2) {
+					return (o1.getValue()).toString().compareTo(o2.getValue().toString());
+				}
+			});
+	 
+			String IJMN = scoreList.get(0).toString();
+			return IJMN;
+			
+		
+	}
+
+	
+	public void repeatForTwenty(int tempI, int tempJ, int tempM, int tempN) {
+		setRepeatScore(0);
+		setRepeatChocolate(0);
+		setRepeatFive(0);
+		setRepeatFour(0);
+		for(int i = 0; i < 20; i++) {
+			testBoard = null;
+			testBoard = new Board(board);
+			testBoard.setFirstCandy(tempI, tempJ);
+			testBoard.setSelectedFirst();
+			testBoard.move(tempM, tempN);
+			repeatScore = getRepeatScore() + testBoard.getScore();
+			repeatChocolate = getRepeatChocolate() + testBoard.getChocolateNUM();
+			repeatFive = getRepeatFive() + testBoard.getFiveNUM();
+			repeatFour = getRepeatFour() + testBoard.getFourXNUM() + testBoard.getFourYNUM();
+		}
+		setRepeatScore(getRepeatScore()/20);
+		setRepeatChocolate(getRepeatChocolate()/20);
+		setRepeatFive(getRepeatFive()/20);
+		setRepeatFour(getRepeatFour()/20);
+		
+	}
+	
+	
+	void setTempI(int i) {
+		tempI = i;
+	}
+	
+	void setTempJ(int i) {
+		tempJ = i;
+	}
+	
+	void setTempM(int i) {
+		tempM = i;
+	}
+	
+	void setTempN(int i) {
+		tempN = i;
+	}
+	
+	int getTempI() {
+		return tempI;
+	}
+	
+	int getTempJ() {
+		return tempJ;
+	}
+	
+	int getTempM() {
+		return tempM;
+	}
+	
+	int getTempN() {
+		return tempN;
+	}
+	
+	
+	void setRepeatScore(int i) {
+		repeatScore = i;
+	}
+	
+	void setRepeatChocolate(int i) {
+		repeatChocolate = i;
+	}
+	
+	void setRepeatFive(int i) {
+		repeatFive = i;
+	}
+	
+	void setRepeatFour(int i) {
+		repeatFour = i;
+	}
+	
+	int getRepeatScore() {
+		return repeatScore;
+	}
+	
+	int getRepeatChocolate() {
+		return repeatChocolate;
+	}
+	
+	int getRepeatFive() {
+		return repeatFive;
+	}
+	
+	int getRepeatFour() {
+		return repeatFour;
+	}
+	
+}
