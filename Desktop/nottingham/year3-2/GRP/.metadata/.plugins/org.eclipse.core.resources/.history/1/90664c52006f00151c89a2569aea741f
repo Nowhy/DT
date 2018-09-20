@@ -1,0 +1,16 @@
+package chess;
+
+import chess.ChessView;
+
+public class Manage{
+	
+	public void Manage(){
+		chessBoard = new ChessView();
+	}
+	
+	public void start(){
+		
+	}
+	
+	
+}

@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <ImageView
+        android:id="@+id/chessboard"
+        android:layout_width="332dip"
+        android:layout_height="332dip"
+        android:layout_marginLeft="16dip"
+        android:contentDescription="@string/app_name"
+        android:layout_marginTop="34dip"
+        android:src="@drawable/chessboard" />
+    	<ImageButton
+            android:id="@+id/captured1"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+             android:background="@android:color/transparent"
+              android:contentDescription="@string/app_name"  
+            android:src="@drawable/transparent" />
+	<ImageButton
+            android:id="@+id/captured2"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+android:background="@android:color/transparent"  
+ android:contentDescription="@string/app_name"
+            android:src="@drawable/transparent" />
+	<ImageButton
+            android:id="@+id/captured3"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+           android:background="@android:color/transparent" 
+            android:contentDescription="@string/app_name" 
+            android:src="@drawable/transparent" />
+	<ImageButton
+            android:id="@+id/captured4"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"
+            android:src="@drawable/transparent" />
+	<ImageButton
+            android:id="@+id/captured5"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+           android:background="@android:color/transparent"  
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/transparent" />
+    	<ImageButton
+            android:id="@+id/captured6"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+         android:contentDescription="@string/app_name"  
+            android:src="@drawable/transparent" />
+	<ImageButton
+            android:id="@+id/captured7"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"
+            android:src="@drawable/transparent" />
+ 	<ImageButton
+            android:id="@+id/captured8"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+           android:background="@android:color/transparent" 
+            android:contentDescription="@string/app_name" 
+            android:src="@drawable/transparent" />
+  	<ImageButton
+            android:id="@+id/captured9"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent" 
+             android:contentDescription="@string/app_name" 
+            android:src="@drawable/transparent" />
+ 	<ImageButton
+            android:id="@+id/captured10"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+           android:background="@android:color/transparent" 
+            android:contentDescription="@string/app_name" 
+            android:src="@drawable/transparent" />
+  	<ImageButton
+            android:id="@+id/captured11"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+           android:background="@android:color/transparent"  
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/transparent" />
+ 	<ImageButton
+            android:id="@+id/captured12"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+           android:background="@android:color/transparent" 
+            android:contentDescription="@string/app_name" 
+            android:src="@drawable/transparent" />
+ 	<ImageButton
+            android:id="@+id/captured13"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+          android:background="@android:color/transparent"  
+           android:contentDescription="@string/app_name"
+            android:src="@drawable/transparent" />
+   	<ImageButton
+            android:id="@+id/captured14"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+        android:background="@android:color/transparent"  
+         android:contentDescription="@string/app_name"
+            android:src="@drawable/transparent" />
+  	<ImageButton
+            android:id="@+id/captured15"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+         android:background="@android:color/transparent" 
+          android:contentDescription="@string/app_name" 
+            android:src="@drawable/transparent" />
+ 	<ImageButton
+            android:id="@+id/captured16"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+    android:background="@android:color/transparent" 
+     android:contentDescription="@string/app_name" 
+            android:src="@drawable/transparent" />
+ 	<ImageButton
+            android:id="@+id/captured17"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+          android:background="@android:color/transparent" 
+           android:contentDescription="@string/app_name" 
+            android:src="@drawable/transparent" />
+ 	<ImageButton
+            android:id="@+id/captured18"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+          android:background="@android:color/transparent" 
+           android:contentDescription="@string/app_name" 
+            android:src="@drawable/transparent" />
+ 	<ImageButton
+            android:id="@+id/captured19"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+          android:background="@android:color/transparent" 
+           android:contentDescription="@string/app_name" 
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/captured20"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+        android:background="@android:color/transparent" 
+         android:contentDescription="@string/app_name" 
+            android:src="@drawable/transparent" />
+ <ImageButton
+            android:id="@+id/captured21"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+      android:background="@android:color/transparent"  
+       android:contentDescription="@string/app_name"
+            android:src="@drawable/transparent" />
+    <ImageButton
+            android:id="@+id/captured22"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+         android:background="@android:color/transparent" 
+          android:contentDescription="@string/app_name" 
+            android:src="@drawable/transparent" />
+  <ImageButton
+            android:id="@+id/captured23"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+       android:background="@android:color/transparent"  
+        android:contentDescription="@string/app_name"
+            android:src="@drawable/transparent" />
+   <ImageButton
+            android:id="@+id/captured24"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+     android:background="@android:color/transparent"  
+      android:contentDescription="@string/app_name"
+            android:src="@drawable/transparent" />
+    <ImageButton
+            android:id="@+id/captured25"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+         android:background="@android:color/transparent"  
+          android:contentDescription="@string/app_name"
+            android:src="@drawable/transparent" />
+  <ImageButton
+            android:id="@+id/captured26"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+       android:background="@android:color/transparent"  
+        android:contentDescription="@string/app_name"
+            android:src="@drawable/transparent" />
+   <ImageButton
+            android:id="@+id/captured27"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+    android:background="@android:color/transparent"  
+     android:contentDescription="@string/app_name"
+            android:src="@drawable/transparent" />
+  <ImageButton
+            android:id="@+id/captured28"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+android:background="@android:color/transparent"  
+ android:contentDescription="@string/app_name"
+            android:src="@drawable/transparent" />
+ <ImageButton
+            android:id="@+id/captured29"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+android:background="@android:color/transparent" 
+ android:contentDescription="@string/app_name" 
+            android:src="@drawable/transparent" />
+     <ImageButton
+            android:id="@+id/captured30"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+          android:background="@android:color/transparent"  
+           android:contentDescription="@string/app_name"
+            android:src="@drawable/transparent" />
+  <ImageButton
+            android:id="@+id/captured31"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+          android:background="@android:color/transparent" 
+           android:contentDescription="@string/app_name" 
+            android:src="@drawable/transparent" />
+  
+	<ImageButton
+            android:id="@+id/rshuai"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="#00000000"
+             android:contentDescription="@string/app_name"
+            android:src="@drawable/rshuai" />
+
+     <ImageButton
+            android:id="@+id/bbing2"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+            android:scaleType="fitXY"
+            android:background="#00000000"
+             android:contentDescription="@string/app_name"
+            android:src="@drawable/bbing" />
+	
+
+     <ImageButton
+            android:id="@+id/rbing5"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+            android:scaleType="fitXY"
+             android:contentDescription="@string/app_name"
+            android:background="#00000000"
+            android:src="@drawable/rbing" />
+  
+
+      <ImageButton
+            android:id="@+id/rbing4"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+            android:scaleType="fitXY"
+            android:background="#00000000"
+             android:contentDescription="@string/app_name"
+            android:src="@drawable/rbing" />
+
+       <ImageButton
+            android:id="@+id/rbing3"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+            android:scaleType="fitXY"
+            android:background="#00000000"
+             android:contentDescription="@string/app_name"
+            android:src="@drawable/rbing" />
+
+       <ImageButton
+            android:id="@+id/rbing2"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+            android:scaleType="fitXY"
+            android:background="#00000000"
+             android:contentDescription="@string/app_name"
+            android:src="@drawable/rbing" />
+
+       <ImageButton
+            android:id="@+id/rbing1"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+            android:scaleType="fitXY"
+            android:background="#00000000"
+             android:contentDescription="@string/app_name"
+            android:src="@drawable/rbing" />
+
+       <ImageButton
+            android:id="@+id/rpao2"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+            android:scaleType="fitXY"
+            android:background="#00000000"
+             android:contentDescription="@string/app_name"
+            android:src="@drawable/rpao" />
+
+       <ImageButton
+            android:id="@+id/rpao1"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+            android:scaleType="fitXY"
+            android:background="#00000000"
+             android:contentDescription="@string/app_name"
+            android:src="@drawable/rpao" />
+
+       <ImageButton
+            android:id="@+id/bpao2"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+            android:scaleType="fitXY"
+            android:background="#00000000"
+             android:contentDescription="@string/app_name"
+            android:src="@drawable/bpao" />
+
+       <ImageButton
+            android:id="@+id/bpao1"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+            android:scaleType="fitXY"
+            android:background="#00000000"
+             android:contentDescription="@string/app_name"
+            android:src="@drawable/bpao" />
+
+		<ImageButton
+		    android:id="@+id/rju2"
+		    android:layout_width="34dip"
+		    android:layout_height="34dip"
+		    android:scaleType="fitXY"
+		    android:background="#00000000"
+		     android:contentDescription="@string/app_name"
+		    android:src="@drawable/rju" />
+
+		<ImageButton
+		    android:id="@+id/rju1"
+		    android:layout_width="34dip"
+		    android:layout_height="34dip"
+		    android:scaleType="fitXY"
+		    android:background="#00000000"
+		     android:contentDescription="@string/app_name"
+		    android:src="@drawable/rju" />
+
+		<ImageButton
+		    android:id="@+id/bma2"
+		    android:layout_width="34dip"
+		    android:layout_height="34dip"
+		    android:scaleType="fitXY"
+		    android:background="#00000000"
+		     android:contentDescription="@string/app_name"
+		    android:src="@drawable/bma" />
+
+		<ImageButton
+		    android:id="@+id/rma2"
+		    android:layout_width="34dip"
+		    android:layout_height="34dip"
+		    android:scaleType="fitXY"
+		    android:background="#00000000"
+		     android:contentDescription="@string/app_name"
+		    android:src="@drawable/rma" />
+
+		<ImageButton
+		    android:id="@+id/bju1"
+		    android:layout_width="34dip"
+		    android:layout_height="34dip"
+		    android:scaleType="fitXY"
+		    android:background="#00000000"
+		     android:contentDescription="@string/app_name"
+		    android:src="@drawable/bju" />
+
+		 <ImageButton
+		    android:id="@+id/bju2"
+		    android:layout_width="34dip"
+		    android:layout_height="34dip"
+		    android:scaleType="fitXY"
+		    android:background="#00000000"
+		     android:contentDescription="@string/app_name"
+		    android:src="@drawable/bju" />
+
+		<ImageButton
+		    android:id="@+id/bxiang1"
+		    android:layout_width="34dip"
+		    android:layout_height="34dip"
+		    android:scaleType="fitXY"
+		    android:background="#00000000"
+		     android:contentDescription="@string/app_name"
+		    android:src="@drawable/bxiang" />
+		
+		<ImageButton
+		    android:id="@+id/bxiang2"
+		    android:layout_width="34dip"
+		    android:layout_height="34dip"
+		    android:scaleType="fitXY"
+		   	android:background="#00000000"
+		   	 android:contentDescription="@string/app_name"
+		    android:src="@drawable/bxiang" />
+		
+		<ImageButton
+		    android:id="@+id/bma1"
+		   	android:layout_width="34dip"
+		   	android:layout_height="34dip"
+		    android:scaleType="fitXY"
+		    android:background="#00000000"
+		     android:contentDescription="@string/app_name"
+		    android:src="@drawable/bma" />
+
+		<ImageButton
+		    android:id="@+id/rxiang2"
+		    android:layout_width="34dip"
+			android:layout_height="34dip"
+		    android:scaleType="fitXY"
+		    android:background="#00000000"
+		     android:contentDescription="@string/app_name"
+		    android:src="@drawable/rxiang" />
+		
+		<ImageButton
+		    android:id="@+id/rxiang1"
+		    android:layout_width="34dip"
+		    android:layout_height="34dip"
+		    android:scaleType="fitXY"
+		    android:background="#00000000"
+		     android:contentDescription="@string/app_name"
+		    android:src="@drawable/rxiang" />
+		
+		<ImageButton
+		    android:id="@+id/rshi2"
+		            android:layout_width="34dip"
+		            android:layout_height="34dip"
+		     android:scaleType="fitXY"
+		            android:background="#00000000"
+		             android:contentDescription="@string/app_name"
+		    android:src="@drawable/rshi" />
+		
+		<ImageButton
+		    android:id="@+id/rshi1"
+		            android:layout_width="34dip"
+		            android:layout_height="34dip"
+		     android:scaleType="fitXY"
+		            android:background="#00000000"
+		             android:contentDescription="@string/app_name"
+		    android:src="@drawable/rshi" />
+		
+		<ImageButton
+		    android:id="@+id/bshi2"
+		            android:layout_width="34dip"
+		            android:layout_height="34dip"
+		     android:scaleType="fitXY"
+		            android:background="#00000000"
+		             android:contentDescription="@string/app_name"
+		    android:src="@drawable/bshi" />
+		
+		<ImageButton
+		    android:id="@+id/bshuai"
+		            android:layout_width="34dip"
+		            android:layout_height="34dip"
+		     android:scaleType="fitXY"
+		            android:background="#00000000"
+		             android:contentDescription="@string/app_name"
+		    android:src="@drawable/bshuai" />
+		
+		<ImageButton
+		    android:id="@+id/rma1"
+		            android:layout_width="34dip"
+		            android:layout_height="34dip"
+		     android:scaleType="fitXY"
+		            android:background="#00000000"
+		             android:contentDescription="@string/app_name"
+		    android:src="@drawable/rma" />
+		
+		<ImageButton
+		    android:id="@+id/bbing1"
+		            android:layout_width="34dip"
+		            android:layout_height="34dip"
+		     android:scaleType="fitXY"
+		            android:background="#00000000"
+		             android:contentDescription="@string/app_name"
+		    android:src="@drawable/bbing" />
+		
+		<ImageButton
+		    android:id="@+id/bbing4"
+		    android:layout_width="34dip"
+		    android:layout_height="34dip"
+		     android:scaleType="fitXY"
+		            android:background="#00000000"
+		             android:contentDescription="@string/app_name"
+		    android:src="@drawable/bbing" />
+		
+		<ImageButton
+		    android:id="@+id/bshi1"
+		    android:layout_width="34dip"
+		    android:layout_height="34dip"
+		    android:background="#00000000"
+		     android:contentDescription="@string/app_name"
+		    android:scaleType="fitXY"
+		    android:src="@drawable/bshi" />
+		
+		<ImageButton
+		    android:id="@+id/bbing5"
+		    android:layout_width="34dip"
+		    android:layout_height="34dip"
+		    android:background="#00000000"
+		     android:contentDescription="@string/app_name"
+		    android:scaleType="fitXY"
+		    android:src="@drawable/bbing" />
+		
+		<ImageButton
+		    android:id="@+id/bbing3"
+		    android:layout_width="34dip"
+		    android:layout_height="34dip"
+		    android:background="#00000000"
+		     android:contentDescription="@string/app_name"
+		    android:scaleType="fitXY"
+		    android:src="@drawable/bbing" />
+
+<ImageButton
+            android:id="@+id/transparent1"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+			android:background="@android:color/transparent"  
+			 android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+    <ImageButton
+            android:id="@+id/transparent2"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+           android:background="@android:color/transparent" 
+            android:contentDescription="@string/app_name"        
+            android:src="@drawable/transparent" />
+    <ImageButton
+            android:id="@+id/transparent3"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+           android:background="@android:color/transparent"    
+            android:contentDescription="@string/app_name"     
+            android:src="@drawable/transparent" />
+    <ImageButton
+            android:id="@+id/transparent4"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+    <ImageButton
+            android:id="@+id/transparent5"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"   
+             android:contentDescription="@string/app_name"      
+            android:src="@drawable/transparent" />
+    <ImageButton
+            android:id="@+id/transparent6"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"   
+             android:contentDescription="@string/app_name"      
+            android:src="@drawable/transparent" />
+    <ImageButton
+            android:id="@+id/transparent7"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+    <ImageButton
+            android:id="@+id/transparent8"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+    <ImageButton
+            android:id="@+id/transparent9"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+	    <ImageButton
+            android:id="@+id/transparent10"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+	        <ImageButton
+            android:id="@+id/transparent11"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"   
+             android:contentDescription="@string/app_name"      
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent12"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"   
+             android:contentDescription="@string/app_name"      
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent13"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent14"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent15"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent" 
+             android:contentDescription="@string/app_name"        
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent16"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent" 
+             android:contentDescription="@string/app_name"        
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent17"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent18"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent" 
+             android:contentDescription="@string/app_name"        
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent19"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent20"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"   
+             android:contentDescription="@string/app_name"      
+            android:src="@drawable/transparent" />
+ <ImageButton
+            android:id="@+id/transparent21"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent" 
+             android:contentDescription="@string/app_name"        
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent22"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent23"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"   
+             android:contentDescription="@string/app_name"      
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent24"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent25"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"   
+             android:contentDescription="@string/app_name"      
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent26"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"   
+             android:contentDescription="@string/app_name"      
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent27"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent28"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"   
+             android:contentDescription="@string/app_name"      
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent29"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"    
+             android:contentDescription="@string/app_name"     
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent30"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent31"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent" 
+             android:contentDescription="@string/app_name"        
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent32"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent" 
+             android:contentDescription="@string/app_name"        
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent33"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent" 
+             android:contentDescription="@string/app_name"        
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent34"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"   
+             android:contentDescription="@string/app_name"      
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent35"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"    
+             android:contentDescription="@string/app_name"     
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent36"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent37"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent38"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent39"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent40"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent41"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent42"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent43"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent44"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent" 
+             android:contentDescription="@string/app_name"        
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent45"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent" 
+             android:contentDescription="@string/app_name"        
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent46"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent47"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+
+<ImageButton
+            android:id="@+id/transparent48"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent49"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent50"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent" 
+             android:contentDescription="@string/app_name"        
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent51"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent52"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent" 
+             android:contentDescription="@string/app_name"        
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent53"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+           android:background="@android:color/transparent"  
+            android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent54"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+           android:background="@android:color/transparent"  
+            android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent55"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent56"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent" 
+             android:contentDescription="@string/app_name"        
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent57"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"  
+             android:contentDescription="@string/app_name"       
+            android:src="@drawable/transparent" />
+<ImageButton
+            android:id="@+id/transparent58"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+			android:scaleType="fitXY"
+            android:background="@android:color/transparent"   
+             android:contentDescription="@string/app_name"      
+            android:src="@drawable/transparent" />
+
+ <TextView
+        android:id="@+id/recommend_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+         android:contentDescription="@string/app_name"
+        android:layout_marginTop="412dp"
+        android:text="                 Suggestions:\n" />
+
+
+     <Button
+        android:id="@+id/undo_label"
+        android:layout_width="70dip"
+        android:layout_height="30dip"
+        android:layout_marginLeft="150dip"
+        android:layout_marginTop="385dip"
+         android:contentDescription="@string/app_name"
+        android:text="@string/undo_label"
+        android:textSize="10sp" /> 
+
+</RelativeLayout>

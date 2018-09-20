@@ -1,0 +1,289 @@
+package UI;
+import javax.swing.*;  
+public class Rule {  
+    ChessBoard board = null;  
+    ChessPiece piece = null;  
+    ChessPoint point[][];  
+    int startI, startJ, endI, endJ;  
+  
+    public Rule(ChessBoard board, ChessPoint point[][]) {  
+        this.board = board;  
+        this.point = point;  
+    }  
+  
+    public void isWin(ChessPiece moveChess,ChessPiece piece) {  
+    	this.piece = piece;  
+        if(piece != null){
+          if (piece.getName() == "将" || piece.getName() == "帅") {  
+            if (piece.getType() == "Red") {  
+                JOptionPane.showMessageDialog(null, "Black  wins！");  
+            } else {  
+                JOptionPane.showMessageDialog(null, "Red  wins！");  
+            }  
+         }
+        }
+        if(moveKingRule()){
+        	if (piece.getType() == "Red") {  
+                JOptionPane.showMessageDialog(null, "Black  wins！");  
+            } else {  
+                JOptionPane.showMessageDialog(null, "Red  wins！");  
+            }  
+        }
+    }
+    
+    public boolean moveKingRule(){
+    	 boolean bool = false;
+    	 int x = board.BKing.getX(); 
+    	 int y = board.BKing.getY(); 
+    	 int startX = 0;
+    	 int startY = 0;
+    	 for (int i = 1; i <= 9; i++) {  
+             for (int j = 1; j <= 10; j++) {  
+                if( x == point[i][j].getX() && y == point[i][j].getY()){
+                	    startX = i;
+                      	startY = j;
+                      	break;
+                } 
+             }  
+         }   
+    	 
+    	 x = board.RKing.getX(); 
+    	 y = board.RKing.getY(); 
+    	 int endX = 0;
+    	 int endY = 0;
+    	 for (int i = 1; i <= 9; i++) {  
+             for (int j = 1; j <= 10; j++) {  
+                if( x == point[i][j].getX() && y == point[i][j].getY()){
+                	   endX = i;
+                	   endY = j;
+                       break;
+                } 
+             }  
+         }   
+    	 if(endX == startX){
+              for (int j = startY+1; j <= endY-1; j++) { 
+            	 bool = point[startX][j].isPiece();
+            	 if(bool){
+            		 return bool;
+            	 }
+              }
+    	 }
+    	return bool;
+    }
+    
+    
+    public boolean movePieceRule(ChessPiece piece, int startI, int startJ, int endI, int endJ) {  
+        this.piece = piece;  
+        this.startI = startI;  
+        this.startJ = startJ;  
+        this.endI = endI;  
+        this.endJ = endJ;  
+        int minI = Math.min(startI, endI);  
+        int maxI = Math.max(startI, endI);  
+        int minJ = Math.min(startJ, endJ);  
+        int maxJ = Math.max(startJ, endJ);  
+        boolean isMove = false;  
+        if (piece.getName().equals("車")) {  
+            if (startI == endI) {  
+                int j = 0;  
+                for (j = minJ + 1; j <= maxJ - 1; j++) {  
+                    if (point[startI][j].isPiece()) {  
+                    	isMove = false;  
+                        break;  
+                    }  
+                }  
+                if (j == maxJ) {  
+                	isMove = true;  
+                }  
+            } else if (startJ == endJ) {  
+                int i = 0;  
+                for (i = minI + 1; i <= maxI - 1; i++) {  
+                    if (point[i][startJ].isPiece()) {  
+                    	isMove = false;  
+                        break;  
+                    }  
+                }  
+                if (i == maxI) {  
+                	isMove = true;  
+                }  
+            } else {  
+            	isMove = false;  
+            }  
+  
+        } else if (piece.getName().equals("馬")) {  
+            int xAxle = Math.abs(startI - endI);  
+            int yAxle = Math.abs(startJ - endJ);  
+  
+            if (xAxle == 2 && yAxle == 1) {  
+                if (endI > startI) {  
+                    if (point[startI + 1][startJ].isPiece()) {  
+                        isMove = false;  
+                    } else {  
+                        isMove = true;  
+                    }  
+                }  
+                if (endI < startI) {  
+                    if (point[startI - 1][startJ].isPiece()) {  
+                        isMove = false;  
+                    } else {  
+                        isMove = true;  
+                    }  
+                }  
+  
+            }else if (xAxle == 1 && yAxle == 2) {  
+                if (endJ > startJ) {  
+                    if (point[startI][startJ + 1].isPiece()) {  
+                        isMove = false;  
+                    } else {  
+                        isMove = true;  
+                    }  
+                }  
+                if (endJ < startJ) {  
+                    if (point[startI][startJ - 1].isPiece()) {  
+                        isMove = false;  
+                    } else {  
+                        isMove = true;  
+                    }  
+                }  
+  
+            } else {  
+                isMove = false;  
+            }  
+        } else if (piece.getName().equals("象")) {  
+            int centerI = (startI + endI) / 2;  
+            int centerJ = (startJ + endJ) / 2;  
+            int xAxle = Math.abs(startI - endI);  
+            int yAxle = Math.abs(startJ - endJ);  
+            if (xAxle == 2 && yAxle == 2 && endJ <= 5) {  
+                if (point[centerI][centerJ].isPiece()) {  
+                    isMove = false;  
+                } else {  
+                    isMove = true;  
+                }  
+            } else {  
+                isMove = false;  
+            }  
+        } else if (piece.getName().equals("相")) {  
+            int centerI = (startI + endI) / 2;  
+            int centerJ = (startJ + endJ) / 2;  
+            int xAxle = Math.abs(startI - endI);  
+            int yAxle = Math.abs(startJ - endJ);  
+            if (xAxle == 2 && yAxle == 2 && endJ >= 6) {  
+                if (point[centerI][centerJ].isPiece()) {  
+                    isMove = false;  
+                } else {  
+                    isMove = true;  
+                }  
+            } else {  
+                isMove = false;  
+            }  
+        } else if (piece.getName().equals("炮")) {  
+            int number = 0;  
+            if (startI == endI) {  
+                int j = 0;  
+                for (j = minJ + 1; j <= maxJ - 1; j++) {  
+                    if (point[startI][j].isPiece()) {  
+                        number++;  
+                    }  
+                }  
+                if (number > 1) {  
+                    isMove = false;  
+                } else if (number == 1) {  
+                    if (point[endI][endJ].isPiece()) {  
+                        isMove = true;  
+                    }  
+                } else if (number == 0 && !point[endI][endJ].isPiece()) {  
+                    isMove = true;  
+                }  
+            } else if (startJ == endJ) {  
+                int i = 0;  
+                for (i = minI + 1; i <= maxI - 1; i++) {  
+                    if (point[i][startJ].isPiece()) {  
+                        number++;  
+                    }  
+                }  
+                if (number > 1) {  
+                    isMove = false;  
+                } else if (number == 1) {  
+                    if (point[endI][endJ].isPiece()) {  
+                        isMove = true;  
+                    }  
+                } else if (number == 0 && !point[endI][endJ].isPiece()) {  
+                    isMove = true;  
+                }  
+            } else {  
+                isMove = false;  
+            }  
+        } else if (piece.getName().equals("兵")) {  
+            int xAxle = Math.abs(startI - endI);  
+            if (endJ >= 6) {  
+                if (startJ - endJ == 1 && xAxle == 0) {  
+                    isMove = true;  
+                }  
+  
+                else {  
+                    isMove = false;  
+                }  
+            } else if (endJ <= 5) {  
+                if ((startJ - endJ == 1) && (xAxle == 0)) {  
+                    isMove = true;  
+                } else if ((endJ - startJ == 0) && (xAxle == 1)) {  
+                    isMove = true;  
+                } else {  
+                    isMove = false;  
+                }  
+            }  
+        } else if (piece.getName().equals("卒")) {  
+            int xAxle = Math.abs(startI - endI);  
+            if (endJ <= 5) {  
+                if (endJ - startJ == 1 && xAxle == 0) {  
+                    isMove = true;  
+                } else {  
+                    isMove = false;  
+                }  
+            } else if (endJ >= 6) {  
+                if ((endJ - startJ == 1) && (xAxle == 0)) {  
+                    isMove = true;  
+                } else if ((endJ - startJ == 0) && (xAxle == 1)) {  
+                    isMove = true;  
+                } else {  
+                    isMove = false;  
+                }  
+            }  
+        }  
+  
+        else if (piece.getName().equals("士")) {  
+            int xAxle = Math.abs(startI - endI);  
+            int yAxle = Math.abs(startJ - endJ);  
+            if (endI <= 6 && endI >= 4 && xAxle == 1 && yAxle == 1) {  
+                isMove = true;  
+            } else {  
+                isMove = false;  
+            }  
+        } else if (piece.getName().equals("仕")) {  
+            int xAxle = Math.abs(startI - endI);  
+            int yAxle = Math.abs(startJ - endJ);  
+            if (endI <= 6 && endI >= 4 && xAxle == 1 && yAxle == 1) {  
+                isMove = true;  
+            } else {  
+                isMove = false;  
+            }  
+        } else if ((piece.getName().equals("帅"))  
+                || (piece.getName().equals("将"))) {  
+            int xAxle = Math.abs(startI - endI);  
+            int yAxle = Math.abs(startJ - endJ);  
+            if (endI <= 6 && endI >= 4) {  
+                if ((xAxle == 1 && yAxle == 0) || (xAxle == 0 && yAxle == 1)) {  
+                    isMove = true;  
+                } else {  
+                    isMove = false;  
+                }  
+            } else {  
+                isMove = false;  
+            }  
+        }  
+  
+        return isMove;  
+  
+    }  
+}

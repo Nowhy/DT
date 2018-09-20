@@ -1,0 +1,139 @@
+package UI;
+import javax.swing.*;  
+import java.awt.*;  
+import java.awt.event.*;  
+import java.util.ArrayList;
+
+
+/**
+ * The chess structure is from the website but the content has been modified
+ * The orignal version only for making chess manual
+ **/
+
+
+/**
+ * /
+ * @author BaoHan
+ *
+ */
+public class UI extends JFrame implements ActionListener {  
+	/** Global variables should be set null here
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	ChessBoard board = null;
+	Container con = null;
+    Record record = null;
+    JMenuBar bar;  
+    JMenu Menu;  
+    JMenuItem NewChess, SaveChess, Exit;  
+    JFileChooser fileChooser = null;  
+    ArrayList<MoveStep> gameChess = null;  
+    JButton button4;
+    
+    /** 
+     *  1. Give a menu that could restart and exit
+     *  2. The chess board and record board in the center of the window
+     *  3. The "undo" button is on the buttom of the window
+     */ 
+    public UI() {  
+        bar = new JMenuBar();  
+        Menu = new JMenu("Menu");  
+        NewChess = new JMenuItem("NewChess");   
+        Exit = new JMenuItem("Exit");  
+        Menu.add(NewChess);  
+        Menu.add(Exit);  
+        bar.add(Menu);  
+        setJMenuBar(bar);  
+        setTitle("Advanced Chess Game");  
+        NewChess.addActionListener(this);  
+        Exit.addActionListener(this);  
+        /**
+         * 45 is the length of each piece
+         * 9 is the number of columns
+         * 10 is the number of rows
+         */
+        board = new ChessBoard(45, 45, 9, 10);  
+        record = board.record;  
+        JSplitPane split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, true,board, record); 
+        split.setDividerSize(5);  
+        split.setDividerLocation(460);  
+        /**
+         * In the panel center, there are two boards so they should be split
+         * In the panel buttom, there is only one button
+         */
+        con = getContentPane();
+        con.add(split, BorderLayout.CENTER);
+        addWindowListener(new WindowAdapter() {  
+            public void windowClosing(WindowEvent e) {  
+                System.exit(0);  
+            }  
+        }); 
+        /**
+         * As the design, the "research" and "reminder" should be as buttons.
+         * But eventually, these all changed to run for multi-thread
+         */
+//        JPanel p2 = new JPanel();
+//        p2.setLayout(new GridLayout(1, 5));
+        button4 = new JButton("Undo");
+        button4.addActionListener(this);
+//        p2.add(button4);
+        con.add(button4, BorderLayout.SOUTH);
+        
+        setVisible(true);  
+        /**
+         * menu in the 60
+         */
+        setBounds(60, 20, 900, 600);  
+        fileChooser = new JFileChooser();  
+        con.validate();  
+        validate();  
+    }  
+  
+    /**
+     * 
+     */
+    public void actionPerformed(ActionEvent e) {  
+        if (e.getSource() == NewChess) {  
+            con.removeAll();  
+            NewChess.setEnabled(true);  
+            this.setTitle(NewChess.getText());  
+            /**
+             * The length of each piece is 45, adding 5 as the extra clicking space  
+             */
+            board = new ChessBoard(50, 50, 9, 10);
+            record = board.record;  
+            JSplitPane split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, true, board, record);  
+            split.setDividerSize(5);  
+            split.setDividerLocation(460);  
+            JPanel p2 = new JPanel();
+            p2.setLayout(new GridLayout(1, 5));
+            button4 = new JButton("Undo");
+            button4.addActionListener(this);
+            p2.add(button4);
+            con.add(p2, BorderLayout.SOUTH);
+            con.add(split, BorderLayout.CENTER);  
+            validate();  
+        }  
+        if (e.getSource() == Exit) {  
+          System.exit(0);
+        } 
+        if(e.getSource() == button4){
+        	if(record.movements.isEmpty()){
+        		JOptionPane.showMessageDialog(null, "Empty record,cannot use undo.", "alert", JOptionPane.ERROR_MESSAGE); 
+        	}else{
+        	int size = record.movements.size();
+        	ChessPoint pStart = record.movements.get(size-1).pStart;
+        	ChessPoint pEnd = record.movements.get(size-1).pEnd;
+        	ChessPiece move = record.movements.get(size-1).move;
+        	ChessPiece end = record.movements.get(size-1).eaten;
+        	board.undoFromButton(pStart,pEnd,move,end);
+        	record.movements.remove(size-1);
+        	}
+        }
+    }  
+  
+    public static void main(String args[]) {  
+       UI n = new UI(); 
+    }  
+}  

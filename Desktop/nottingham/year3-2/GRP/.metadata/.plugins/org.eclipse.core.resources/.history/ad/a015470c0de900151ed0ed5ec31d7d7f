@@ -1,0 +1,46 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class test {
+	public static void main(String[] args){
+    AI ai = new AI();
+
+    ai.init();
+//    int j = 0;
+//    for(int i = 0; i < 90; i ++){
+//		if(j == 9) {
+//			System.out.println("\n");
+//			j = 0;i --;
+//		}
+//		else{
+//			System.out.print(ai.piece[i]+ " ");
+//			j ++;
+//		}
+//	}         
+//    System.out.println("\n------------------------------");
+//    System.out.println("------------------------------");
+//
+// 
+    ai.printBoard();
+    int isWin = 3;
+    while(isWin != 1){
+    	System.out.println("Move Chess Piece'x y' to 'x y': ");
+    	Scanner sc = new Scanner(System.in);
+    	String a = sc.nextLine();
+    	System.out.println(a);
+    	String[] aaa = a.split(" ");
+    	int x1 = Integer.parseInt(aaa[0]);
+    	int y1 = Integer.parseInt(aaa[1]);
+    	int x2 = Integer.parseInt(aaa[2]);
+    	int y2 = Integer.parseInt(aaa[3]);
+    	isWin = ai.takeAMove(y1*9+x1, y2*9+x2);
+    	if(isWin != 1){
+    		isWin = ai.computerMove();
+    		System.out.println("computer: " + (ai.getComputerMove().from % 9 -1) + "  " + (ai.getComputerMove().dest % 9 - 1));
+    		ai.printBoard();
+    	}
+ //   	System.out.println(ai.getMoveString());
+    	
+    }
+  }
+}

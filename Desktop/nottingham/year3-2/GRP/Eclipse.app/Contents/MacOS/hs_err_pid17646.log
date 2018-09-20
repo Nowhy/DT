@@ -1,0 +1,1173 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fff97b654dd, pid=17646, tid=5643
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_60-b27) (build 1.8.0_60-b27)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.60-b23 mixed mode bsd-amd64 compressed oops)
+# Problematic frame:
+# C  [libobjc.A.dylib+0x14dd]  objc_msgSend+0x1d
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000101808800):  JavaThread "main" [_thread_in_native, id=5643, stack(0x00007fff5f400000,0x00007fff5fc00000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x00000000125c2b78
+
+Registers:
+RAX=0x0000000000000000, RBX=0x0000000131654630, RCX=0xe0000000125c2b65, RDX=0x00007fff7cb1dce0
+RSP=0x00007fff5fbfaf38, RBP=0x00007fff5fbfb030, RSI=0x00007fff9c428b7a, RDI=0x0000000125c29e20
+R8 =0x00000001306cfbe0, R9 =0x00007fff7ada2640, R10=0x00007fff9c428b7a, R11=0x00000000125c2b60
+R12=0x000000013a84f090, R13=0x0000000138398ca0, R14=0x0000000121ea63f0, R15=0x0000000125c29e20
+RIP=0x00007fff97b654dd, EFLAGS=0x0000000000010206, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007fff5fbfaf38)
+0x00007fff5fbfaf38:   00007fff918b9b21 0000000000000005
+0x00007fff5fbfaf48:   00007fff7ada25b0 00007fff7ada2630
+0x00007fff5fbfaf58:   0000000000000001 0000000100559660
+0x00007fff5fbfaf68:   0000000100614f20 000000013a84f090
+0x00007fff5fbfaf78:   00007fff7ada25b0 00007fff5fbfafc0
+0x00007fff5fbfaf88:   00007fff916dd64f 00007fff5fbfafc0
+0x00007fff5fbfaf98:   00007fff7ada2630 0000000000000001
+0x00007fff5fbfafa8:   00007fff7ada2630 0000000000000000
+0x00007fff5fbfafb8:   0000000138398ca0 00007fff7ada2810
+0x00007fff5fbfafc8:   0000000000000000 00007fff5fbfb000
+0x00007fff5fbfafd8:   00007fff9bfe6b59 0000000000000000
+0x00007fff5fbfafe8:   000000013a84f090 00007fff7ada2630
+0x00007fff5fbfaff8:   0000000000000000 00007fff5fbfb030
+0x00007fff5fbfb008:   000000013a84f090 0000000100614f20
+0x00007fff5fbfb018:   0000000138398ca0 0000000131654630
+0x00007fff5fbfb028:   0000000100615010 00007fff5fbfb050
+0x00007fff5fbfb038:   00007fff918b8f56 000000013838ec40
+0x00007fff5fbfb048:   0000000138398cb8 00007fff5fbfb060
+0x00007fff5fbfb058:   00007fff9c07cbc4 00007fff5fbfc0f0
+0x00007fff5fbfb068:   00007fff9c07c853 0001e5755ee874d4
+0x00007fff5fbfb078:   0000000100615020 47efffffe0000000
+0x00007fff5fbfb088:   0000000000000000 000000013838ec40
+0x00007fff5fbfb098:   0000000000000000 0000000000000000
+0x00007fff5fbfb0a8:   0000000000000000 0000000000000000
+0x00007fff5fbfb0b8:   0000000000000000 0000000000000000
+0x00007fff5fbfb0c8:   0000000000000000 0000000000000000
+0x00007fff5fbfb0d8:   0000000000000000 0000000000000000
+0x00007fff5fbfb0e8:   0000000000000000 0000000000000000
+0x00007fff5fbfb0f8:   0000000000000000 0000000000000000
+0x00007fff5fbfb108:   0000000000000000 0000000000000000
+0x00007fff5fbfb118:   0000000000000000 0000000000000000
+0x00007fff5fbfb128:   0000000000000000 0000000000000000 
+
+Instructions: (pc=0x00007fff97b654dd)
+0x00007fff97b654bd:   44 00 00 48 85 ff 2e 74 62 40 f6 c7 01 2e 75 66
+0x00007fff97b654cd:   49 bb f8 ff ff ff ff 7f 00 00 4c 23 1f 49 89 f2
+0x00007fff97b654dd:   45 23 53 18 49 c1 e2 04 4d 03 53 10 49 3b 32 75
+0x00007fff97b654ed:   04 41 ff 62 08 49 83 3a 01 76 0d 49 83 c2 10 49 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x0000000131654630 is an unknown value
+RCX=0xe0000000125c2b65 is an unknown value
+RDX=0x00007fff7cb1dce0: __CFRuntimeObjCClassTable+0 in /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation at 0x00007fff9bfc8000
+RSP=0x00007fff5fbfaf38 is pointing into the stack for thread: 0x0000000101808800
+RBP=0x00007fff5fbfb030 is pointing into the stack for thread: 0x0000000101808800
+RSI=0x00007fff9c428b7a: CreateStringFromFileSystemRepresentationByAddingPercentEscapes.hexchars+0x144ca in /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation at 0x00007fff9bfc8000
+RDI=0x0000000125c29e20 is an unknown value
+R8 =0x00000001306cfbe0 is an unknown value
+R9 =0x00007fff7ada2640: __block_descriptor_tmp+0x8cc0 in /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox at 0x00007fff916a8000
+R10=0x00007fff9c428b7a: CreateStringFromFileSystemRepresentationByAddingPercentEscapes.hexchars+0x144ca in /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation at 0x00007fff9bfc8000
+R11=0x00000000125c2b60 is an unknown value
+R12=0x000000013a84f090 is an unknown value
+R13=0x0000000138398ca0 is an unknown value
+R14=0x0000000121ea63f0 is an unknown value
+R15=0x0000000125c29e20 is an unknown value
+
+
+Stack: [0x00007fff5f400000,0x00007fff5fc00000],  sp=0x00007fff5fbfaf38,  free space=8171k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libobjc.A.dylib+0x14dd]  objc_msgSend+0x1d
+C  [HIToolbox+0x210f56]  ActivateTSMDocument_GetMenu_TimerHandler+0x6b
+C  [CoreFoundation+0xb4bc4]  __CFRUNLOOP_IS_CALLING_OUT_TO_A_TIMER_CALLBACK_FUNCTION__+0x14
+C  [CoreFoundation+0xb4853]  __CFRunLoopDoTimer+0x433
+C  [CoreFoundation+0x132e6a]  __CFRunLoopDoTimers+0x12a
+C  [CoreFoundation+0x6fcd1]  __CFRunLoopRun+0x731
+C  [CoreFoundation+0x6f338]  CFRunLoopRunSpecific+0x128
+C  [HIToolbox+0x30935]  RunCurrentEventLoopInMode+0xeb
+C  [HIToolbox+0x3076f]  ReceiveNextEventCommon+0x1b0
+C  [HIToolbox+0x305af]  _BlockUntilNextEventMatchingListInModeWithFilter+0x47
+C  [AppKit+0x8a0ee]  _DPSNextEvent+0x42b
+C  [AppKit+0x456943]  -[NSApplication _nextEventMatchingEventMask:untilDate:inMode:dequeue:]+0x1c6
+C  [libswt-pi-cocoa-4527.jnilib+0x13cbf]  Java_org_eclipse_swt_internal_cocoa_OS_objc_1msgSendSuper__Lorg_eclipse_swt_internal_cocoa_objc_1super_2JJJJZ+0x7a
+J 7192  org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Lorg/eclipse/swt/internal/cocoa/objc_super;JJJJZ)J (0 bytes) @ 0x000000010697f41e [0x000000010697f340+0xde]
+J 22304 C2 org.eclipse.swt.widgets.Display.applicationProc(JJJJJJ)J (99 bytes) @ 0x000000010850a5a8 [0x000000010850a2c0+0x2e8]
+v  ~StubRoutines::call_stub
+V  [libjvm.dylib+0x2eab0e]
+V  [libjvm.dylib+0x321820]
+V  [libjvm.dylib+0x319a12]
+C  [libswt-cocoa-4527.jnilib+0x25f92]  callback+0x540
+C  [libswt-cocoa-4527.jnilib+0xb525]  fn3_6+0x5a
+C  [libswt-pi-cocoa-4527.jnilib+0xfb17]  Java_org_eclipse_swt_internal_cocoa_OS_objc_1msgSend__JJJJJZ+0x4f
+J 1723  org.eclipse.swt.internal.cocoa.OS.objc_msgSend(JJJJJZ)J (0 bytes) @ 0x000000010681848d [0x00000001068183c0+0xcd]
+J 31107 C2 org.eclipse.swt.widgets.Display.readAndDispatch()Z (247 bytes) @ 0x00000001079acab4 [0x00000001079ac0c0+0x9f4]
+J 19917% C2 org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run()V (765 bytes) @ 0x00000001087506d0 [0x00000001087504a0+0x230]
+j  org.eclipse.core.databinding.observable.Realm.runWithDefault(Lorg/eclipse/core/databinding/observable/Realm;Ljava/lang/Runnable;)V+12
+j  org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(Lorg/eclipse/e4/ui/model/application/MApplicationElement;Lorg/eclipse/e4/core/contexts/IEclipseContext;)Ljava/lang/Object;+57
+j  org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(Lorg/eclipse/e4/ui/model/application/MApplicationElement;)V+20
+j  org.eclipse.ui.internal.Workbench$5.run()V+310
+j  org.eclipse.core.databinding.observable.Realm.runWithDefault(Lorg/eclipse/core/databinding/observable/Realm;Ljava/lang/Runnable;)V+12
+j  org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Lorg/eclipse/swt/widgets/Display;Lorg/eclipse/ui/application/WorkbenchAdvisor;)I+18
+j  org.eclipse.ui.PlatformUI.createAndRunWorkbench(Lorg/eclipse/swt/widgets/Display;Lorg/eclipse/ui/application/WorkbenchAdvisor;)I+2
+j  org.eclipse.ui.internal.ide.application.IDEApplication.start(Lorg/eclipse/equinox/app/IApplicationContext;)Ljava/lang/Object;+111
+j  org.eclipse.equinox.internal.app.EclipseAppHandle.run(Ljava/lang/Object;)Ljava/lang/Object;+135
+j  org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(Ljava/lang/Object;)Ljava/lang/Object;+85
+j  org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(Ljava/lang/Object;)Ljava/lang/Object;+82
+j  org.eclipse.core.runtime.adaptor.EclipseStarter.run(Ljava/lang/Object;)Ljava/lang/Object;+109
+j  org.eclipse.core.runtime.adaptor.EclipseStarter.run([Ljava/lang/String;Ljava/lang/Runnable;)Ljava/lang/Object;+132
+v  ~StubRoutines::call_stub
+V  [libjvm.dylib+0x2eab0e]
+V  [libjvm.dylib+0x4caf44]
+V  [libjvm.dylib+0x4cb478]
+V  [libjvm.dylib+0x342cc0]
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+100
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+56
+j  org.eclipse.equinox.launcher.Main.invokeFramework([Ljava/lang/String;[Ljava/net/URL;)V+265
+j  org.eclipse.equinox.launcher.Main.basicRun([Ljava/lang/String;)V+160
+j  org.eclipse.equinox.launcher.Main.run([Ljava/lang/String;)I+4
+v  ~StubRoutines::call_stub
+V  [libjvm.dylib+0x2eab0e]
+V  [libjvm.dylib+0x321bb7]
+V  [libjvm.dylib+0x313202]
+C  [eclipse_1611.so+0x6c9c]  startJavaJNI+0x85a
+C  [eclipse_1611.so+0x5681]  startJavaVM+0x9
+C  [eclipse_1611.so+0x3989]  _run+0x1064
+C  [eclipse_1611.so+0x4372]  run+0x1b2
+C  [eclipse+0x17d2]  original_main+0x71b
+C  [eclipse+0x1da4]  main+0x4ce
+C  [eclipse+0xf28]  start+0x34
+C  0x0000000000000001
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 7192  org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Lorg/eclipse/swt/internal/cocoa/objc_super;JJJJZ)J (0 bytes) @ 0x000000010697f3a4 [0x000000010697f340+0x64]
+J 22304 C2 org.eclipse.swt.widgets.Display.applicationProc(JJJJJJ)J (99 bytes) @ 0x000000010850a5a8 [0x000000010850a2c0+0x2e8]
+v  ~StubRoutines::call_stub
+J 1723  org.eclipse.swt.internal.cocoa.OS.objc_msgSend(JJJJJZ)J (0 bytes) @ 0x0000000106818413 [0x00000001068183c0+0x53]
+J 31107 C2 org.eclipse.swt.widgets.Display.readAndDispatch()Z (247 bytes) @ 0x00000001079acab4 [0x00000001079ac0c0+0x9f4]
+J 19917% C2 org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run()V (765 bytes) @ 0x00000001087506d0 [0x00000001087504a0+0x230]
+j  org.eclipse.core.databinding.observable.Realm.runWithDefault(Lorg/eclipse/core/databinding/observable/Realm;Ljava/lang/Runnable;)V+12
+j  org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(Lorg/eclipse/e4/ui/model/application/MApplicationElement;Lorg/eclipse/e4/core/contexts/IEclipseContext;)Ljava/lang/Object;+57
+j  org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(Lorg/eclipse/e4/ui/model/application/MApplicationElement;)V+20
+j  org.eclipse.ui.internal.Workbench$5.run()V+310
+j  org.eclipse.core.databinding.observable.Realm.runWithDefault(Lorg/eclipse/core/databinding/observable/Realm;Ljava/lang/Runnable;)V+12
+j  org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Lorg/eclipse/swt/widgets/Display;Lorg/eclipse/ui/application/WorkbenchAdvisor;)I+18
+j  org.eclipse.ui.PlatformUI.createAndRunWorkbench(Lorg/eclipse/swt/widgets/Display;Lorg/eclipse/ui/application/WorkbenchAdvisor;)I+2
+j  org.eclipse.ui.internal.ide.application.IDEApplication.start(Lorg/eclipse/equinox/app/IApplicationContext;)Ljava/lang/Object;+111
+j  org.eclipse.equinox.internal.app.EclipseAppHandle.run(Ljava/lang/Object;)Ljava/lang/Object;+135
+j  org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(Ljava/lang/Object;)Ljava/lang/Object;+85
+j  org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(Ljava/lang/Object;)Ljava/lang/Object;+82
+j  org.eclipse.core.runtime.adaptor.EclipseStarter.run(Ljava/lang/Object;)Ljava/lang/Object;+109
+j  org.eclipse.core.runtime.adaptor.EclipseStarter.run([Ljava/lang/String;Ljava/lang/Runnable;)Ljava/lang/Object;+132
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+100
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+56
+j  org.eclipse.equinox.launcher.Main.invokeFramework([Ljava/lang/String;[Ljava/net/URL;)V+265
+j  org.eclipse.equinox.launcher.Main.basicRun([Ljava/lang/String;)V+160
+j  org.eclipse.equinox.launcher.Main.run([Ljava/lang/String;)I+4
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000010196a800 JavaThread "Worker-121" [_thread_blocked, id=355843, stack(0x0000700018e84000,0x0000700018f84000)]
+  0x0000000100bda800 JavaThread "Worker-119" [_thread_blocked, id=343503, stack(0x0000700018d81000,0x0000700018e81000)]
+  0x000000013328a000 JavaThread "Process monitor" daemon [_thread_blocked, id=350923, stack(0x0000700018c7e000,0x0000700018d7e000)]
+  0x0000000102a6a000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=295683, stack(0x0000700018b7b000,0x0000700018c7b000)]
+  0x00000001337b2000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=360347, stack(0x0000700018a78000,0x0000700018b78000)]
+  0x0000000102bc0800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=359611, stack(0x0000700018975000,0x0000700018a75000)]
+  0x000000013325d000 JavaThread "process reaper" daemon [_thread_in_native, id=338991, stack(0x00007000121e8000,0x0000700012210000)]
+  0x00000001223d2000 JavaThread "Worker-118" [_thread_blocked, id=318555, stack(0x0000700018466000,0x0000700018566000)]
+  0x00000001012c7000 JavaThread "Worker-117" [_thread_blocked, id=347631, stack(0x0000700018363000,0x0000700018463000)]
+  0x000000013315b000 JavaThread "Worker-116" [_thread_blocked, id=350687, stack(0x0000700017842000,0x0000700017942000)]
+  0x0000000100a89800 JavaThread "Process monitor" daemon [_thread_blocked, id=354351, stack(0x0000700018872000,0x0000700018972000)]
+  0x000000012cec4000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=352839, stack(0x000070001876f000,0x000070001886f000)]
+  0x000000012c95a000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=344879, stack(0x000070001866c000,0x000070001876c000)]
+  0x0000000100bab800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=341843, stack(0x0000700018569000,0x0000700018669000)]
+  0x00000001221c5000 JavaThread "process reaper" daemon [_thread_in_native, id=346047, stack(0x00007000121bd000,0x00007000121e5000)]
+  0x0000000123432800 JavaThread "Process monitor" daemon [_thread_blocked, id=347175, stack(0x0000700018260000,0x0000700018360000)]
+  0x00000001227f6000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=344583, stack(0x000070001815d000,0x000070001825d000)]
+  0x00000001227f4000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=338455, stack(0x000070001805a000,0x000070001815a000)]
+  0x0000000123771000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=335387, stack(0x0000700017f57000,0x0000700018057000)]
+  0x0000000122384000 JavaThread "process reaper" daemon [_thread_in_native, id=340331, stack(0x000070000de9c000,0x000070000dec4000)]
+  0x000000012cb51000 JavaThread "Worker-93" [_thread_blocked, id=328483, stack(0x0000700017e54000,0x0000700017f54000)]
+  0x0000000129e52800 JavaThread "Worker-92" [_thread_blocked, id=345375, stack(0x0000700017d51000,0x0000700017e51000)]
+  0x000000012c867000 JavaThread "Process monitor" daemon [_thread_blocked, id=342787, stack(0x0000700017c4e000,0x0000700017d4e000)]
+  0x000000012cd24800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=342315, stack(0x0000700017b4b000,0x0000700017c4b000)]
+  0x000000012cd29000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=318043, stack(0x0000700017a48000,0x0000700017b48000)]
+  0x0000000101d07000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=332639, stack(0x0000700017945000,0x0000700017a45000)]
+  0x0000000101ba3800 JavaThread "process reaper" daemon [_thread_in_native, id=338831, stack(0x000070000de71000,0x000070000de99000)]
+  0x0000000122383000 JavaThread "Process monitor" daemon [_thread_blocked, id=341019, stack(0x000070001773f000,0x000070001783f000)]
+  0x00000001223e9800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=339523, stack(0x000070001763c000,0x000070001773c000)]
+  0x00000001223e9000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=340815, stack(0x0000700017539000,0x0000700017639000)]
+  0x00000001232d1000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=75291, stack(0x0000700017436000,0x0000700017536000)]
+  0x000000012274c800 JavaThread "process reaper" daemon [_thread_in_native, id=337511, stack(0x000070000de46000,0x000070000de6e000)]
+  0x0000000126987000 JavaThread "Process monitor" daemon [_thread_blocked, id=299103, stack(0x0000700017333000,0x0000700017433000)]
+  0x0000000100b9d000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=314899, stack(0x0000700017230000,0x0000700017330000)]
+  0x000000012d696000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=332999, stack(0x000070001702a000,0x000070001712a000)]
+  0x0000000123774800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=296079, stack(0x0000700016f27000,0x0000700017027000)]
+  0x0000000101334800 JavaThread "process reaper" daemon [_thread_in_native, id=325019, stack(0x0000700014f1a000,0x0000700014f42000)]
+  0x000000012d75e000 JavaThread "Process monitor" daemon [_thread_blocked, id=324255, stack(0x0000700016e24000,0x0000700016f24000)]
+  0x0000000126db3000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=312435, stack(0x0000700016d21000,0x0000700016e21000)]
+  0x0000000102d43000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=329511, stack(0x0000700016812000,0x0000700016912000)]
+  0x0000000102e8d000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=320683, stack(0x0000700015d71000,0x0000700015e71000)]
+  0x0000000102a7a800 JavaThread "process reaper" daemon [_thread_in_native, id=299499, stack(0x0000700014eef000,0x0000700014f17000)]
+  0x000000012d014800 JavaThread "Worker-90" [_thread_blocked, id=336259, stack(0x000070001712d000,0x000070001722d000)]
+  0x0000000123205000 JavaThread "Process monitor" daemon [_thread_blocked, id=329099, stack(0x0000700016c1e000,0x0000700016d1e000)]
+  0x00000001232ef800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=330783, stack(0x0000700016b1b000,0x0000700016c1b000)]
+  0x000000012d6d0800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=331539, stack(0x0000700016a18000,0x0000700016b18000)]
+  0x000000012d54b000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=311131, stack(0x0000700016915000,0x0000700016a15000)]
+  0x000000012d47e000 JavaThread "process reaper" daemon [_thread_in_native, id=315575, stack(0x0000700011366000,0x000070001138e000)]
+  0x000000012d01f800 JavaThread "Process monitor" daemon [_thread_blocked, id=327939, stack(0x000070001670f000,0x000070001680f000)]
+  0x0000000126cf3000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=327687, stack(0x0000700016509000,0x0000700016609000)]
+  0x0000000126c66000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=325847, stack(0x0000700016406000,0x0000700016506000)]
+  0x000000012342f000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=313471, stack(0x0000700015ef7000,0x0000700015ff7000)]
+  0x000000010173a800 JavaThread "process reaper" daemon [_thread_in_native, id=307039, stack(0x000070001133b000,0x0000700011363000)]
+  0x000000012d230000 JavaThread "Worker-89" [_thread_blocked, id=324563, stack(0x0000700015559000,0x0000700015659000)]
+  0x0000000102fca000 JavaThread "Worker-88" [_thread_blocked, id=322411, stack(0x000070001660c000,0x000070001670c000)]
+  0x0000000126c73000 JavaThread "Worker-87" [_thread_blocked, id=310399, stack(0x0000700014dc1000,0x0000700014ec1000)]
+  0x0000000102a8a000 JavaThread "Process monitor" daemon [_thread_blocked, id=314191, stack(0x0000700016303000,0x0000700016403000)]
+  0x0000000126ff7000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=301239, stack(0x0000700016200000,0x0000700016300000)]
+  0x0000000126bb2000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=80407, stack(0x00007000160fd000,0x00007000161fd000)]
+  0x0000000102d33000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=299859, stack(0x0000700015ffa000,0x00007000160fa000)]
+  0x00000001233e1000 JavaThread "process reaper" daemon [_thread_in_native, id=313231, stack(0x0000700011310000,0x0000700011338000)]
+  0x0000000101d1b000 JavaThread "Worker-86" [_thread_blocked, id=289771, stack(0x0000700015456000,0x0000700015556000)]
+  0x0000000102d24000 JavaThread "Process monitor" daemon [_thread_blocked, id=305247, stack(0x0000700015c6e000,0x0000700015d6e000)]
+  0x000000012d698000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=304915, stack(0x0000700015b6b000,0x0000700015c6b000)]
+  0x000000012316b000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=303823, stack(0x0000700015a68000,0x0000700015b68000)]
+  0x0000000102fd1000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=305707, stack(0x0000700015965000,0x0000700015a65000)]
+  0x000000012d6a9000 JavaThread "process reaper" daemon [_thread_in_native, id=306223, stack(0x0000700014ec4000,0x0000700014eec000)]
+  0x0000000126b82000 JavaThread "Worker-83" [_thread_blocked, id=309251, stack(0x0000700015353000,0x0000700015453000)]
+  0x0000000101bec000 JavaThread "Process monitor" daemon [_thread_blocked, id=308739, stack(0x0000700015250000,0x0000700015350000)]
+  0x0000000100e7d000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=308227, stack(0x000070001514d000,0x000070001524d000)]
+  0x000000012c8f9000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=307463, stack(0x000070001504a000,0x000070001514a000)]
+  0x0000000126bb3800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=307227, stack(0x0000700014f47000,0x0000700015047000)]
+  0x0000000101f20000 JavaThread "process reaper" daemon [_thread_in_native, id=306731, stack(0x000070000c44b000,0x000070000c473000)]
+  0x0000000123712000 JavaThread "Process monitor" daemon [_thread_blocked, id=302351, stack(0x0000700014cbe000,0x0000700014dbe000)]
+  0x0000000123589000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=294911, stack(0x0000700014bbb000,0x0000700014cbb000)]
+  0x0000000126b8a000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=289999, stack(0x0000700014ab8000,0x0000700014bb8000)]
+  0x0000000126ea6800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=286359, stack(0x00007000149b5000,0x0000700014ab5000)]
+  0x00000001029c3800 JavaThread "process reaper" daemon [_thread_in_native, id=293719, stack(0x000070000c420000,0x000070000c448000)]
+  0x0000000126bbb000 JavaThread "Worker-82" [_thread_blocked, id=301579, stack(0x000070001367c000,0x000070001377c000)]
+  0x000000012d2a7800 JavaThread "Process monitor" daemon [_thread_blocked, id=253003, stack(0x00007000148b2000,0x00007000149b2000)]
+  0x00000001232a6000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=272343, stack(0x00007000147af000,0x00007000148af000)]
+  0x0000000123455000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=297227, stack(0x00007000146ac000,0x00007000147ac000)]
+  0x0000000123454000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=297051, stack(0x000070001409a000,0x000070001419a000)]
+  0x000000012cedc000 JavaThread "process reaper" daemon [_thread_in_native, id=248867, stack(0x0000700000095000,0x00007000000bd000)]
+  0x000000012ca16000 JavaThread "Worker-80" [_thread_blocked, id=285287, stack(0x000070001120d000,0x000070001130d000)]
+  0x0000000102cff000 JavaThread "Worker-79" [_thread_blocked, id=275459, stack(0x00007000145a9000,0x00007000146a9000)]
+  0x0000000101ba5800 JavaThread "Process monitor" daemon [_thread_blocked, id=287331, stack(0x00007000144a6000,0x00007000145a6000)]
+  0x0000000101ba4800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=295183, stack(0x00007000143a3000,0x00007000144a3000)]
+  0x0000000102c95000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=294923, stack(0x00007000142a0000,0x00007000143a0000)]
+  0x00000001019b4800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=273683, stack(0x000070001419d000,0x000070001429d000)]
+  0x0000000102cf8000 JavaThread "process reaper" daemon [_thread_in_native, id=280335, stack(0x000070000006a000,0x0000700000092000)]
+  0x000000012d1b4000 JavaThread "Process monitor" daemon [_thread_blocked, id=291847, stack(0x0000700013f97000,0x0000700014097000)]
+  0x0000000101464800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=291359, stack(0x0000700013e94000,0x0000700013f94000)]
+  0x0000000100cb5000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=288659, stack(0x0000700013d91000,0x0000700013e91000)]
+  0x000000013b3fd800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=279207, stack(0x0000700013c8e000,0x0000700013d8e000)]
+  0x000000013b3ae000 JavaThread "process reaper" daemon [_thread_in_native, id=280855, stack(0x000070000003f000,0x0000700000067000)]
+  0x00000001019b3800 JavaThread "Worker-78" [_thread_blocked, id=291135, stack(0x0000700013b8b000,0x0000700013c8b000)]
+  0x000000013b6d2000 JavaThread "Process monitor" daemon [_thread_blocked, id=280059, stack(0x0000700013a88000,0x0000700013b88000)]
+  0x000000013b2de800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=284951, stack(0x0000700013985000,0x0000700013a85000)]
+  0x0000000123282800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=283511, stack(0x0000700013882000,0x0000700013982000)]
+  0x000000012c8d9000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=284183, stack(0x000070001377f000,0x000070001387f000)]
+  0x0000000102fcc000 JavaThread "process reaper" daemon [_thread_in_native, id=258123, stack(0x000070000c3f5000,0x000070000c41d000)]
+  0x000000012d1b3000 JavaThread "Worker-77" [_thread_blocked, id=283135, stack(0x0000700013579000,0x0000700013679000)]
+  0x00000001019b5000 JavaThread "Worker-76" [_thread_blocked, id=287839, stack(0x0000700013476000,0x0000700013576000)]
+  0x000000013b3b7800 JavaThread "Process monitor" daemon [_thread_blocked, id=282863, stack(0x0000700013373000,0x0000700013473000)]
+  0x0000000101ba6000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=278019, stack(0x0000700013270000,0x0000700013370000)]
+  0x000000012d081800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=271467, stack(0x000070001316d000,0x000070001326d000)]
+  0x0000000100ba2800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=281951, stack(0x000070001306a000,0x000070001316a000)]
+  0x0000000100cb4000 JavaThread "process reaper" daemon [_thread_in_native, id=262347, stack(0x000070000d4fe000,0x000070000d526000)]
+  0x0000000123207000 JavaThread "Worker-75" [_thread_blocked, id=284467, stack(0x0000700012f67000,0x0000700013067000)]
+  0x000000013b6d0800 JavaThread "Process monitor" daemon [_thread_blocked, id=270107, stack(0x0000700012e64000,0x0000700012f64000)]
+  0x000000013b402000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=269431, stack(0x0000700012d61000,0x0000700012e61000)]
+  0x0000000102c9b000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=226899, stack(0x0000700012c5e000,0x0000700012d5e000)]
+  0x000000012ca17000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=271255, stack(0x0000700012b5b000,0x0000700012c5b000)]
+  0x0000000123456000 JavaThread "process reaper" daemon [_thread_in_native, id=272863, stack(0x000070000d4d3000,0x000070000d4fb000)]
+  0x000000012d53d800 JavaThread "Worker-74" [_thread_blocked, id=278615, stack(0x0000700012a58000,0x0000700012b58000)]
+  0x000000012d61d000 JavaThread "Process monitor" daemon [_thread_blocked, id=277331, stack(0x0000700012955000,0x0000700012a55000)]
+  0x000000012d13d000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=258655, stack(0x0000700012852000,0x0000700012952000)]
+  0x0000000101007000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=249831, stack(0x000070001274f000,0x000070001284f000)]
+  0x00000001016b0800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=271871, stack(0x0000700011bab000,0x0000700011cab000)]
+  0x000000012d401000 JavaThread "process reaper" daemon [_thread_in_native, id=258963, stack(0x000070000c6ff000,0x000070000c727000)]
+  0x0000000101c7a800 JavaThread "Process monitor" daemon [_thread_blocked, id=276739, stack(0x000070001264c000,0x000070001274c000)]
+  0x0000000101c74800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=276011, stack(0x0000700012549000,0x0000700012649000)]
+  0x000000012d249000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=275131, stack(0x0000700012446000,0x0000700012546000)]
+  0x000000012d6ce000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=257911, stack(0x0000700010bfb000,0x0000700010cfb000)]
+  0x0000000100c3c000 JavaThread "process reaper" daemon [_thread_in_native, id=267687, stack(0x000070000c6d4000,0x000070000c6fc000)]
+  0x0000000101fbe800 JavaThread "Worker-73" [_thread_blocked, id=269251, stack(0x0000700012343000,0x0000700012443000)]
+  0x000000012cad3800 JavaThread "Worker-72" [_thread_blocked, id=274771, stack(0x0000700012240000,0x0000700012340000)]
+  0x000000013b6d3800 JavaThread "Process monitor" daemon [_thread_blocked, id=267159, stack(0x00007000120ba000,0x00007000121ba000)]
+  0x00000001029a1800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=239059, stack(0x0000700011fb7000,0x00007000120b7000)]
+  0x000000012c860000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=261391, stack(0x0000700011eb4000,0x0000700011fb4000)]
+  0x0000000123378800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=251967, stack(0x0000700011db1000,0x0000700011eb1000)]
+  0x0000000102cf6000 JavaThread "process reaper" daemon [_thread_in_native, id=243783, stack(0x0000700001632000,0x000070000165a000)]
+  0x000000013b01e000 JavaThread "Process monitor" daemon [_thread_blocked, id=273247, stack(0x0000700011aa8000,0x0000700011ba8000)]
+  0x000000013b020000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=266895, stack(0x00007000119a5000,0x0000700011aa5000)]
+  0x000000013b6d1800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=255003, stack(0x00007000118a2000,0x00007000119a2000)]
+  0x0000000101d04800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=268151, stack(0x0000700011393000,0x0000700011493000)]
+  0x000000013b021000 JavaThread "Worker-71" [_thread_blocked, id=268315, stack(0x0000700011cae000,0x0000700011dae000)]
+  0x000000012cbbd000 JavaThread "process reaper" daemon [_thread_in_native, id=223535, stack(0x0000700001607000,0x000070000162f000)]
+  0x000000012d402000 JavaThread "Process monitor" daemon [_thread_blocked, id=263927, stack(0x000070001169c000,0x000070001179c000)]
+  0x0000000101149000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=263951, stack(0x0000700011599000,0x0000700011699000)]
+  0x000000010139d000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=264503, stack(0x0000700011496000,0x0000700011596000)]
+  0x000000012d740000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=256423, stack(0x000070001110a000,0x000070001120a000)]
+  0x00000001019b6000 JavaThread "Worker-70" [_thread_blocked, id=263247, stack(0x000070001179f000,0x000070001189f000)]
+  0x0000000100ff6000 JavaThread "process reaper" daemon [_thread_in_native, id=255371, stack(0x00007000015dc000,0x0000700001604000)]
+  0x000000013b01f000 JavaThread "Worker-69" [_thread_blocked, id=259195, stack(0x0000700011007000,0x0000700011107000)]
+  0x00000001232a9000 JavaThread "Process monitor" daemon [_thread_blocked, id=245511, stack(0x0000700010f04000,0x0000700011004000)]
+  0x00000001029c1000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=222787, stack(0x0000700010e01000,0x0000700010f01000)]
+  0x000000012d262800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=252887, stack(0x0000700010cfe000,0x0000700010dfe000)]
+  0x000000012d628000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=238339, stack(0x0000700010af8000,0x0000700010bf8000)]
+  0x000000012d0b0800 JavaThread "process reaper" daemon [_thread_in_native, id=247379, stack(0x000070000c6a9000,0x000070000c6d1000)]
+  0x0000000101b51000 JavaThread "Process monitor" daemon [_thread_blocked, id=243451, stack(0x00007000109f5000,0x0000700010af5000)]
+  0x0000000101b4c000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=254539, stack(0x00007000108f2000,0x00007000109f2000)]
+  0x0000000101b4e000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=251371, stack(0x00007000107ef000,0x00007000108ef000)]
+  0x000000012d13c800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=237091, stack(0x00007000101dd000,0x00007000102dd000)]
+  0x00000001015bb000 JavaThread "process reaper" daemon [_thread_in_native, id=252359, stack(0x000070000d4a8000,0x000070000d4d0000)]
+  0x000000012cd1d000 JavaThread "Worker-68" [_thread_blocked, id=225659, stack(0x00007000106ec000,0x00007000107ec000)]
+  0x0000000101f43000 JavaThread "Process monitor" daemon [_thread_blocked, id=253699, stack(0x00007000105e9000,0x00007000106e9000)]
+  0x000000012d364000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=251695, stack(0x00007000104e6000,0x00007000105e6000)]
+  0x000000012d24b000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=253519, stack(0x00007000103e3000,0x00007000104e3000)]
+  0x0000000100c9e800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=250675, stack(0x00007000102e0000,0x00007000103e0000)]
+  0x000000010115a000 JavaThread "process reaper" daemon [_thread_in_native, id=248395, stack(0x000070000c72c000,0x000070000c754000)]
+  0x000000013b7a7000 JavaThread "Process monitor" daemon [_thread_blocked, id=250531, stack(0x00007000100da000,0x00007000101da000)]
+  0x000000013b2ec000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=213359, stack(0x000070000ffd7000,0x00007000100d7000)]
+  0x000000013b029800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=244715, stack(0x000070000fed4000,0x000070000ffd4000)]
+  0x000000012367c000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=219599, stack(0x000070000f6bc000,0x000070000f7bc000)]
+  0x0000000101657000 JavaThread "process reaper" daemon [_thread_in_native, id=221379, stack(0x000070000ab7a000,0x000070000aba2000)]
+  0x000000012d307000 JavaThread "Worker-67" [_thread_blocked, id=224299, stack(0x000070000f4b6000,0x000070000f5b6000)]
+  0x0000000101b19800 JavaThread "Worker-66" [_thread_blocked, id=246275, stack(0x000070000fdd1000,0x000070000fed1000)]
+  0x00000001236d8000 JavaThread "Worker-65" [_thread_blocked, id=234263, stack(0x000070000fcce000,0x000070000fdce000)]
+  0x000000010299e800 JavaThread "Process monitor" daemon [_thread_blocked, id=226335, stack(0x000070000fbcb000,0x000070000fccb000)]
+  0x000000012c91a000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=239695, stack(0x000070000fac8000,0x000070000fbc8000)]
+  0x0000000102b51800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=242735, stack(0x000070000f9c5000,0x000070000fac5000)]
+  0x000000012cf63800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=235535, stack(0x000070000f5b9000,0x000070000f6b9000)]
+  0x0000000102bd0000 JavaThread "process reaper" daemon [_thread_in_native, id=221587, stack(0x000070000ab4f000,0x000070000ab77000)]
+  0x0000000101e4b000 JavaThread "Process monitor" daemon [_thread_blocked, id=234239, stack(0x000070000f8c2000,0x000070000f9c2000)]
+  0x0000000101e4a800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=214763, stack(0x000070000f7bf000,0x000070000f8bf000)]
+  0x0000000101f3a000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=244787, stack(0x000070000eea4000,0x000070000efa4000)]
+  0x000000013b623800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=230875, stack(0x000070000d2a2000,0x000070000d3a2000)]
+  0x0000000102f73800 JavaThread "process reaper" daemon [_thread_in_native, id=190791, stack(0x000070000ab24000,0x000070000ab4c000)]
+  0x0000000101b53000 JavaThread "Process monitor" daemon [_thread_blocked, id=237847, stack(0x000070000f3b3000,0x000070000f4b3000)]
+  0x0000000101bc6000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=222143, stack(0x000070000f2b0000,0x000070000f3b0000)]
+  0x0000000101f3f800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=232455, stack(0x000070000f1ad000,0x000070000f2ad000)]
+  0x0000000101c8a000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=241407, stack(0x000070000f0aa000,0x000070000f1aa000)]
+  0x000000013b485800 JavaThread "process reaper" daemon [_thread_in_native, id=240303, stack(0x000070000c67e000,0x000070000c6a6000)]
+  0x000000012d519000 JavaThread "Worker-64" [_thread_blocked, id=242207, stack(0x000070000efa7000,0x000070000f0a7000)]
+  0x00000001014a9000 JavaThread "Worker-63" [_thread_blocked, id=233503, stack(0x000070000eda1000,0x000070000eea1000)]
+  0x0000000101fa8000 JavaThread "Worker-62" [_thread_blocked, id=239131, stack(0x000070000ec9e000,0x000070000ed9e000)]
+  0x00000001029d3000 JavaThread "Process monitor" daemon [_thread_blocked, id=237599, stack(0x000070000eb18000,0x000070000ec18000)]
+  0x000000012375c000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=235471, stack(0x000070000ea15000,0x000070000eb15000)]
+  0x000000012cb3a800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=234515, stack(0x000070000e912000,0x000070000ea12000)]
+  0x000000013b5ea800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=189051, stack(0x000070000e80f000,0x000070000e90f000)]
+  0x000000013b628800 JavaThread "process reaper" daemon [_thread_in_native, id=235043, stack(0x000070000e7e4000,0x000070000e80c000)]
+  0x0000000101c8e800 JavaThread "Process monitor" daemon [_thread_blocked, id=228871, stack(0x000070000e6e1000,0x000070000e7e1000)]
+  0x0000000101893800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=208147, stack(0x000070000e5de000,0x000070000e6de000)]
+  0x0000000139164000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=193623, stack(0x000070000e0cf000,0x000070000e1cf000)]
+  0x0000000101635000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=209611, stack(0x000070000dfcc000,0x000070000e0cc000)]
+  0x000000013b3bb800 JavaThread "process reaper" daemon [_thread_in_native, id=212091, stack(0x0000700005475000,0x000070000549d000)]
+  0x0000000102fc1000 JavaThread "Worker-61" [_thread_blocked, id=233167, stack(0x000070000d937000,0x000070000da37000)]
+  0x000000013b65b000 JavaThread "Process monitor" daemon [_thread_blocked, id=229927, stack(0x000070000e4db000,0x000070000e5db000)]
+  0x000000013b2f4000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=222311, stack(0x000070000e3d8000,0x000070000e4d8000)]
+  0x0000000101b8c000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=217027, stack(0x000070000e2d5000,0x000070000e3d5000)]
+  0x00000001391fc800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=229427, stack(0x000070000e1d2000,0x000070000e2d2000)]
+  0x0000000102cca000 JavaThread "process reaper" daemon [_thread_in_native, id=227603, stack(0x000070000544a000,0x0000700005472000)]
+  0x0000000101f13000 JavaThread "Process monitor" daemon [_thread_blocked, id=225807, stack(0x000070000dd43000,0x000070000de43000)]
+  0x0000000101ff2800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=222551, stack(0x000070000dc40000,0x000070000dd40000)]
+  0x0000000101f16000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=183059, stack(0x000070000db3d000,0x000070000dc3d000)]
+  0x0000000101d37000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=218807, stack(0x000070000da3a000,0x000070000db3a000)]
+  0x000000010173b000 JavaThread "Worker-60" [_thread_blocked, id=223415, stack(0x000070000dec9000,0x000070000dfc9000)]
+  0x000000012d767000 JavaThread "process reaper" daemon [_thread_in_native, id=212479, stack(0x000070000539d000,0x00007000053c5000)]
+  0x000000012d5df800 JavaThread "Worker-59" [_thread_blocked, id=214115, stack(0x000070000aeb0000,0x000070000afb0000)]
+  0x00000001220bb800 JavaThread "Process monitor" daemon [_thread_blocked, id=183903, stack(0x000070000d834000,0x000070000d934000)]
+  0x00000001029a4000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=215659, stack(0x000070000d731000,0x000070000d831000)]
+  0x000000012c86b000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=218887, stack(0x000070000d62e000,0x000070000d72e000)]
+  0x000000012cede800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=217887, stack(0x000070000d52b000,0x000070000d62b000)]
+  0x0000000102eba000 JavaThread "process reaper" daemon [_thread_in_native, id=210879, stack(0x0000700002053000,0x000070000207b000)]
+  0x000000013b027800 JavaThread "Worker-58" [_thread_blocked, id=206839, stack(0x000070000d3a5000,0x000070000d4a5000)]
+  0x000000013b026000 JavaThread "Process monitor" daemon [_thread_blocked, id=168579, stack(0x000070000d19f000,0x000070000d29f000)]
+  0x00000001015ee800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=192259, stack(0x000070000ce96000,0x000070000cf96000)]
+  0x000000013b006000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=162375, stack(0x000070000c781000,0x000070000c881000)]
+  0x0000000126b9d000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=186939, stack(0x000070000c57b000,0x000070000c67b000)]
+  0x0000000126beb000 JavaThread "process reaper" daemon [_thread_in_native, id=170359, stack(0x0000700002028000,0x0000700002050000)]
+  0x000000012cf0a000 JavaThread "Process monitor" daemon [_thread_blocked, id=200667, stack(0x000070000d09c000,0x000070000d19c000)]
+  0x0000000122571000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=212623, stack(0x000070000cf99000,0x000070000d099000)]
+  0x0000000102998000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=169375, stack(0x000070000cd93000,0x000070000ce93000)]
+  0x0000000102f48000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=200139, stack(0x000070000cc90000,0x000070000cd90000)]
+  0x0000000102e18800 JavaThread "process reaper" daemon [_thread_in_native, id=211779, stack(0x0000700001b41000,0x0000700001b69000)]
+  0x00000001014cc000 JavaThread "Worker-57" [_thread_blocked, id=215015, stack(0x000070000bcda000,0x000070000bdda000)]
+  0x0000000101cfd000 JavaThread "Process monitor" daemon [_thread_blocked, id=205107, stack(0x000070000cb8d000,0x000070000cc8d000)]
+  0x0000000101cfc800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=205575, stack(0x000070000ca8a000,0x000070000cb8a000)]
+  0x0000000101f5c000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=205323, stack(0x000070000c987000,0x000070000ca87000)]
+  0x0000000101d0b000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=204807, stack(0x000070000bee3000,0x000070000bfe3000)]
+  0x0000000101b58000 JavaThread "process reaper" daemon [_thread_in_native, id=195939, stack(0x0000700001b16000,0x0000700001b3e000)]
+  0x000000013327c000 JavaThread "Worker-56" [_thread_blocked, id=193483, stack(0x000070000c884000,0x000070000c984000)]
+  0x0000000133700000 JavaThread "Worker-55" [_thread_blocked, id=207447, stack(0x000070000c478000,0x000070000c578000)]
+  0x00000001013b7000 JavaThread "Process monitor" daemon [_thread_blocked, id=204035, stack(0x000070000c2f2000,0x000070000c3f2000)]
+  0x000000010158c000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=203523, stack(0x000070000c1ef000,0x000070000c2ef000)]
+  0x00000001012f8800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=202739, stack(0x000070000c0ec000,0x000070000c1ec000)]
+  0x00000001331ca000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=202147, stack(0x000070000bfe9000,0x000070000c0e9000)]
+  0x0000000133207800 JavaThread "process reaper" daemon [_thread_in_native, id=201659, stack(0x0000700001aeb000,0x0000700001b13000)]
+  0x0000000102fbc000 JavaThread "Worker-54" [_thread_blocked, id=189467, stack(0x000070000bde0000,0x000070000bee0000)]
+  0x0000000101890000 JavaThread "Process monitor" daemon [_thread_blocked, id=180679, stack(0x000070000b1b9000,0x000070000b2b9000)]
+  0x0000000101bc2000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=187675, stack(0x000070000b0b6000,0x000070000b1b6000)]
+  0x0000000101bd8800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=186099, stack(0x000070000afb3000,0x000070000b0b3000)]
+  0x00000001331cb000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=187307, stack(0x000070000adad000,0x000070000aead000)]
+  0x00000001331c7000 JavaThread "process reaper" daemon [_thread_in_native, id=197067, stack(0x0000700001ffd000,0x0000700002025000)]
+  0x0000000102e2f000 JavaThread "Worker-53" [_thread_blocked, id=184067, stack(0x000070000bbd7000,0x000070000bcd7000)]
+  0x000000010130f000 JavaThread "Process monitor" daemon [_thread_blocked, id=198919, stack(0x000070000bad4000,0x000070000bbd4000)]
+  0x000000010130e000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=198671, stack(0x000070000b9d1000,0x000070000bad1000)]
+  0x000000012d609000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=197931, stack(0x000070000b8ce000,0x000070000b9ce000)]
+  0x000000012d608000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=197775, stack(0x000070000b7cb000,0x000070000b8cb000)]
+  0x0000000100aad000 JavaThread "process reaper" daemon [_thread_in_native, id=197211, stack(0x00007000045c8000,0x00007000045f0000)]
+  0x0000000101f62000 JavaThread "Process monitor" daemon [_thread_blocked, id=195075, stack(0x000070000b6c8000,0x000070000b7c8000)]
+  0x0000000101f61800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=194563, stack(0x000070000b5c5000,0x000070000b6c5000)]
+  0x0000000101f60800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=191799, stack(0x000070000b4c2000,0x000070000b5c2000)]
+  0x0000000101fd4000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=194239, stack(0x000070000b3bf000,0x000070000b4bf000)]
+  0x00000001011a0800 JavaThread "process reaper" daemon [_thread_in_native, id=184471, stack(0x000070000459d000,0x00007000045c5000)]
+  0x0000000102e70800 JavaThread "Worker-52" [_thread_blocked, id=175619, stack(0x000070000b2bc000,0x000070000b3bc000)]
+  0x0000000133754000 JavaThread "Worker-51" [_thread_blocked, id=165435, stack(0x000070000acaa000,0x000070000adaa000)]
+  0x0000000101246800 JavaThread "Worker-50" [_thread_blocked, id=188419, stack(0x000070000aba7000,0x000070000aca7000)]
+  0x0000000101cff000 JavaThread "Process monitor" daemon [_thread_blocked, id=185235, stack(0x000070000aa21000,0x000070000ab21000)]
+  0x0000000101d74000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=187919, stack(0x000070000a003000,0x000070000a103000)]
+  0x0000000101d73000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=136179, stack(0x0000700009f00000,0x000070000a000000)]
+  0x0000000126d60000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=140639, stack(0x0000700009dfd000,0x0000700009efd000)]
+  0x000000012cfe4800 JavaThread "process reaper" daemon [_thread_in_native, id=120295, stack(0x0000700004572000,0x000070000459a000)]
+  0x0000000133305000 JavaThread "Process monitor" daemon [_thread_blocked, id=182143, stack(0x000070000a91e000,0x000070000aa1e000)]
+  0x000000012301a000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=181879, stack(0x000070000a81b000,0x000070000a91b000)]
+  0x00000001335ec000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=179499, stack(0x000070000a718000,0x000070000a818000)]
+  0x0000000101ebd800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=179403, stack(0x000070000a615000,0x000070000a715000)]
+  0x00000001268d2000 JavaThread "process reaper" daemon [_thread_in_native, id=182475, stack(0x0000700005372000,0x000070000539a000)]
+  0x000000012d049800 JavaThread "Worker-49" [_thread_blocked, id=180915, stack(0x000070000a512000,0x000070000a612000)]
+  0x000000012301e800 JavaThread "Process monitor" daemon [_thread_blocked, id=180267, stack(0x000070000a40f000,0x000070000a50f000)]
+  0x00000001233fc800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=180159, stack(0x000070000a30c000,0x000070000a40c000)]
+  0x0000000133300000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=172383, stack(0x000070000a209000,0x000070000a309000)]
+  0x0000000133447000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=169119, stack(0x000070000a106000,0x000070000a206000)]
+  0x000000013328c800 JavaThread "process reaper" daemon [_thread_in_native, id=158555, stack(0x0000700005347000,0x000070000536f000)]
+  0x000000012c866000 JavaThread "Process monitor" daemon [_thread_blocked, id=132803, stack(0x0000700009bf7000,0x0000700009cf7000)]
+  0x0000000102fa9800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=154163, stack(0x0000700009af4000,0x0000700009bf4000)]
+  0x0000000102837800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=173507, stack(0x00007000099f1000,0x0000700009af1000)]
+  0x0000000102857800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=169519, stack(0x00007000098ee000,0x00007000099ee000)]
+  0x000000012cc83800 JavaThread "process reaper" daemon [_thread_in_native, id=176347, stack(0x00007000053ca000,0x00007000053f2000)]
+  0x0000000133306000 JavaThread "Worker-48" [_thread_blocked, id=178003, stack(0x0000700009cfa000,0x0000700009dfa000)]
+  0x000000012ce39000 JavaThread "Process monitor" daemon [_thread_blocked, id=129695, stack(0x00007000097eb000,0x00007000098eb000)]
+  0x0000000102a15000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=157423, stack(0x00007000092dc000,0x00007000093dc000)]
+  0x0000000133090800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=163135, stack(0x00007000091d9000,0x00007000092d9000)]
+  0x000000012cfeb000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=171051, stack(0x0000700008ed0000,0x0000700008fd0000)]
+  0x000000012c9d5000 JavaThread "process reaper" daemon [_thread_in_native, id=139803, stack(0x000070000531c000,0x0000700005344000)]
+  0x0000000102eb2000 JavaThread "Worker-47" [_thread_blocked, id=154383, stack(0x0000700008229000,0x0000700008329000)]
+  0x00000001019d1000 JavaThread "Process monitor" daemon [_thread_blocked, id=173087, stack(0x00007000096e8000,0x00007000097e8000)]
+  0x0000000101fd7800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=163683, stack(0x00007000095e5000,0x00007000096e5000)]
+  0x000000012cd09800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=174611, stack(0x00007000093df000,0x00007000094df000)]
+  0x000000012ce3c000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=158387, stack(0x00007000090d6000,0x00007000091d6000)]
+  0x000000012d304800 JavaThread "process reaper" daemon [_thread_in_native, id=167143, stack(0x000070000541f000,0x0000700005447000)]
+  0x0000000101c93800 JavaThread "Worker-45" [_thread_blocked, id=172003, stack(0x0000700007f20000,0x0000700008020000)]
+  0x00000001334d4800 JavaThread "Worker-43" [_thread_blocked, id=167955, stack(0x00007000094e2000,0x00007000095e2000)]
+  0x000000012d308000 JavaThread "Worker-42" [_thread_blocked, id=152955, stack(0x0000700008fd3000,0x00007000090d3000)]
+  0x0000000102c4b000 JavaThread "Process monitor" daemon [_thread_blocked, id=157843, stack(0x0000700008dcd000,0x0000700008ecd000)]
+  0x0000000126bcb800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=156959, stack(0x0000700008cca000,0x0000700008dca000)]
+  0x000000012ca5d000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=162831, stack(0x0000700008bc7000,0x0000700008cc7000)]
+  0x000000012d7b8800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=159495, stack(0x0000700008126000,0x0000700008226000)]
+  0x000000012d47b800 JavaThread "process reaper" daemon [_thread_in_native, id=162587, stack(0x00007000034e7000,0x000070000350f000)]
+  0x0000000100c8c800 JavaThread "Worker-41" [_thread_blocked, id=160863, stack(0x00007000065d5000,0x00007000066d5000)]
+  0x0000000102a2b000 JavaThread "Worker-40" [_thread_blocked, id=148471, stack(0x0000700008023000,0x0000700008123000)]
+  0x000000012cb66800 JavaThread "Process monitor" daemon [_thread_blocked, id=152159, stack(0x0000700008ac4000,0x0000700008bc4000)]
+  0x000000012cf57000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=159427, stack(0x00007000089c1000,0x0000700008ac1000)]
+  0x000000012ccfc800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=162143, stack(0x00007000088be000,0x00007000089be000)]
+  0x000000012ce42000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=161927, stack(0x00007000087bb000,0x00007000088bb000)]
+  0x0000000102933000 JavaThread "process reaper" daemon [_thread_in_native, id=148555, stack(0x00007000034bc000,0x00007000034e4000)]
+  0x0000000101d56000 JavaThread "Process monitor" daemon [_thread_blocked, id=137327, stack(0x00007000086b8000,0x00007000087b8000)]
+  0x0000000101d54000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=161683, stack(0x00007000085b5000,0x00007000086b5000)]
+  0x0000000102b3b800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=160395, stack(0x00007000084b2000,0x00007000085b2000)]
+  0x0000000101a17000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=153343, stack(0x00007000083af000,0x00007000084af000)]
+  0x0000000102934800 JavaThread "process reaper" daemon [_thread_in_native, id=154019, stack(0x00007000022b1000,0x00007000022d9000)]
+  0x0000000100dac800 JavaThread "Worker-39" [_thread_blocked, id=151163, stack(0x0000700007e1d000,0x0000700007f1d000)]
+  0x0000000133202000 JavaThread "Worker-38" [_thread_blocked, id=150531, stack(0x0000700007d1a000,0x0000700007e1a000)]
+  0x000000012d52f000 JavaThread "Process monitor" daemon [_thread_blocked, id=150019, stack(0x0000700007c17000,0x0000700007d17000)]
+  0x000000010153f000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=149311, stack(0x0000700007b14000,0x0000700007c14000)]
+  0x000000012d022800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=139283, stack(0x0000700007a11000,0x0000700007b11000)]
+  0x0000000101b65000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=127479, stack(0x000070000790e000,0x0000700007a0e000)]
+  0x00000001014a1800 JavaThread "process reaper" daemon [_thread_in_native, id=146639, stack(0x0000700001e4a000,0x0000700001e72000)]
+  0x00000001336aa800 JavaThread "Process monitor" daemon [_thread_blocked, id=121115, stack(0x000070000780b000,0x000070000790b000)]
+  0x0000000133201800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=148999, stack(0x0000700007708000,0x0000700007808000)]
+  0x0000000133055800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=117587, stack(0x0000700007605000,0x0000700007705000)]
+  0x00000001336c3800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=139135, stack(0x00007000064d2000,0x00007000065d2000)]
+  0x0000000101762000 JavaThread "process reaper" daemon [_thread_in_native, id=137527, stack(0x0000700001e1f000,0x0000700001e47000)]
+  0x0000000126b9b000 JavaThread "Process monitor" daemon [_thread_blocked, id=142663, stack(0x0000700007502000,0x0000700007602000)]
+  0x0000000101e7d000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=137767, stack(0x00007000073ff000,0x00007000074ff000)]
+  0x0000000101c7f000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=141247, stack(0x00007000068de000,0x00007000069de000)]
+  0x00000001268b2800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=143335, stack(0x00007000067db000,0x00007000068db000)]
+  0x0000000126887800 JavaThread "process reaper" daemon [_thread_in_native, id=141707, stack(0x0000700001df4000,0x0000700001e1c000)]
+  0x00000001331cd000 JavaThread "Worker-37" [_thread_blocked, id=136935, stack(0x00007000066d8000,0x00007000067d8000)]
+  0x000000012ca59800 JavaThread "Worker-36" [_thread_blocked, id=145767, stack(0x00007000072fc000,0x00007000073fc000)]
+  0x0000000133303000 JavaThread "Process monitor" daemon [_thread_blocked, id=144419, stack(0x00007000071f9000,0x00007000072f9000)]
+  0x000000012c89f800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=143835, stack(0x00007000070f6000,0x00007000071f6000)]
+  0x0000000102e1c000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=118783, stack(0x0000700006ff3000,0x00007000070f3000)]
+  0x00000001269e7000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=130299, stack(0x0000700006ef0000,0x0000700006ff0000)]
+  0x000000010128a000 JavaThread "process reaper" daemon [_thread_in_native, id=137111, stack(0x0000700002286000,0x00007000022ae000)]
+  0x00000001017b8000 JavaThread "Worker-35" [_thread_blocked, id=130511, stack(0x0000700006ded000,0x0000700006eed000)]
+  0x0000000133069000 JavaThread "Process monitor" daemon [_thread_blocked, id=142007, stack(0x0000700006cea000,0x0000700006dea000)]
+  0x00000001331c3800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=113431, stack(0x0000700006be7000,0x0000700006ce7000)]
+  0x000000013303f800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=125499, stack(0x0000700006ae4000,0x0000700006be4000)]
+  0x0000000133022000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=129119, stack(0x00007000069e1000,0x0000700006ae1000)]
+  0x0000000133286000 JavaThread "process reaper" daemon [_thread_in_native, id=115091, stack(0x0000700001b99000,0x0000700001bc1000)]
+  0x0000000133285000 JavaThread "Process monitor" daemon [_thread_blocked, id=126875, stack(0x00007000063cf000,0x00007000064cf000)]
+  0x00000001335f5000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=133707, stack(0x00007000062cc000,0x00007000063cc000)]
+  0x0000000101ae4800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=121395, stack(0x0000700005fc3000,0x00007000060c3000)]
+  0x00000001017ae000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=122831, stack(0x0000700005ec0000,0x0000700005fc0000)]
+  0x000000012d480800 JavaThread "process reaper" daemon [_thread_in_native, id=117971, stack(0x0000700001b6e000,0x0000700001b96000)]
+  0x0000000101dfe800 JavaThread "Worker-34" [_thread_blocked, id=134151, stack(0x0000700005dbd000,0x0000700005ebd000)]
+  0x000000012c915800 JavaThread "Process monitor" daemon [_thread_blocked, id=128775, stack(0x00007000061c9000,0x00007000062c9000)]
+  0x000000010295c800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=127755, stack(0x00007000060c6000,0x00007000061c6000)]
+  0x0000000102c47000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=128039, stack(0x0000700005bb7000,0x0000700005cb7000)]
+  0x0000000102a84800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=120375, stack(0x0000700005ab4000,0x0000700005bb4000)]
+  0x000000012d616000 JavaThread "process reaper" daemon [_thread_in_native, id=132107, stack(0x000070000168a000,0x00007000016b2000)]
+  0x0000000133097800 JavaThread "Worker-33" [_thread_blocked, id=126647, stack(0x0000700005cba000,0x0000700005dba000)]
+  0x0000000133168000 JavaThread "Worker-32" [_thread_blocked, id=119843, stack(0x00007000059b1000,0x0000700005ab1000)]
+  0x00000001011c5000 JavaThread "Worker-31" [_thread_blocked, id=124419, stack(0x00007000058ae000,0x00007000059ae000)]
+  0x0000000101482000 JavaThread "Process monitor" daemon [_thread_blocked, id=123907, stack(0x00007000057ab000,0x00007000058ab000)]
+  0x00000001014b2000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=123527, stack(0x00007000056a8000,0x00007000057a8000)]
+  0x000000012d3fd000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=122459, stack(0x00007000055a5000,0x00007000056a5000)]
+  0x000000012d04d000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=115347, stack(0x00007000054a2000,0x00007000055a2000)]
+  0x000000012d035800 JavaThread "process reaper" daemon [_thread_in_native, id=120815, stack(0x000070000165f000,0x0000700001687000)]
+  0x0000000101eea000 JavaThread "Process monitor" daemon [_thread_blocked, id=76863, stack(0x0000700005219000,0x0000700005319000)]
+  0x0000000101f5f000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=81067, stack(0x0000700004060000,0x0000700004160000)]
+  0x0000000101e6f000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=81403, stack(0x00007000033b9000,0x00007000034b9000)]
+  0x00000001335f0000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=104927, stack(0x0000700002712000,0x0000700002812000)]
+  0x00000001335ef000 JavaThread "process reaper" daemon [_thread_in_native, id=110291, stack(0x0000700001381000,0x00007000013a9000)]
+  0x000000013305a000 JavaThread "Process monitor" daemon [_thread_blocked, id=120895, stack(0x0000700005116000,0x0000700005216000)]
+  0x00000001331b4800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=83831, stack(0x0000700004f10000,0x0000700005010000)]
+  0x0000000102d78800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=33331, stack(0x0000700004163000,0x0000700004263000)]
+  0x000000013321b800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=119659, stack(0x00007000017e2000,0x00007000018e2000)]
+  0x000000012d6fd000 JavaThread "process reaper" daemon [_thread_in_native, id=113299, stack(0x0000700000170000,0x0000700000198000)]
+  0x0000000101739800 JavaThread "Process monitor" daemon [_thread_blocked, id=98711, stack(0x0000700004e0d000,0x0000700004f0d000)]
+  0x000000012d580800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=119063, stack(0x0000700004d0a000,0x0000700004e0a000)]
+  0x0000000102aa0000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=118355, stack(0x0000700004c07000,0x0000700004d07000)]
+  0x0000000102c4d000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=118187, stack(0x0000700002918000,0x0000700002a18000)]
+  0x000000012d345800 JavaThread "Worker-29" [_thread_blocked, id=113943, stack(0x0000700005013000,0x0000700005113000)]
+  0x000000012d391000 JavaThread "process reaper" daemon [_thread_in_native, id=66951, stack(0x0000700000118000,0x0000700000140000)]
+  0x0000000101a7c000 JavaThread "Process monitor" daemon [_thread_blocked, id=111215, stack(0x0000700003130000,0x0000700003230000)]
+  0x0000000101ae1800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=76759, stack(0x0000700002c21000,0x0000700002d21000)]
+  0x0000000126bc4800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=109711, stack(0x000070000250c000,0x000070000260c000)]
+  0x00000001331d3800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=111559, stack(0x0000700002183000,0x0000700002283000)]
+  0x0000000102f13000 JavaThread "process reaper" daemon [_thread_in_native, id=16747, stack(0x00007000000ed000,0x0000700000115000)]
+  0x0000000126d91000 JavaThread "Worker-28" [_thread_blocked, id=66267, stack(0x000070000302d000,0x000070000312d000)]
+  0x000000012d27d000 JavaThread "Worker-27" [_thread_blocked, id=65411, stack(0x000070000260f000,0x000070000270f000)]
+  0x000000012cd2f800 JavaThread "Worker-26" [_thread_blocked, id=75871, stack(0x0000700002080000,0x0000700002180000)]
+  0x0000000133018800 JavaThread "Process monitor" daemon [_thread_blocked, id=90939, stack(0x0000700004b04000,0x0000700004c04000)]
+  0x0000000126b84000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=98559, stack(0x0000700004a01000,0x0000700004b01000)]
+  0x0000000126b83000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=71039, stack(0x0000700004269000,0x0000700004369000)]
+  0x00000001268d4800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=90787, stack(0x00007000018e5000,0x00007000019e5000)]
+  0x0000000126bc3800 JavaThread "process reaper" daemon [_thread_in_native, id=106563, stack(0x00007000000c2000,0x00007000000ea000)]
+  0x000000012d575800 JavaThread "Process monitor" daemon [_thread_blocked, id=15415, stack(0x00007000048fe000,0x00007000049fe000)]
+  0x00000001010f6000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=74263, stack(0x00007000047fb000,0x00007000048fb000)]
+  0x000000012d537800 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=101915, stack(0x00007000046f8000,0x00007000047f8000)]
+  0x000000010165d000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=103859, stack(0x00007000045f5000,0x00007000046f5000)]
+  0x0000000101124800 JavaThread "process reaper" daemon [_thread_in_native, id=100215, stack(0x0000700000145000,0x000070000016d000)]
+  0x00000001237ce000 JavaThread "Process monitor" daemon [_thread_blocked, id=101379, stack(0x000070000446f000,0x000070000456f000)]
+  0x000000010296a000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=66647, stack(0x000070000436c000,0x000070000446c000)]
+  0x00000001028b9000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=103219, stack(0x0000700003eda000,0x0000700003fda000)]
+  0x000000012208b000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=97267, stack(0x0000700002b1e000,0x0000700002c1e000)]
+  0x0000000123018000 JavaThread "process reaper" daemon [_thread_in_native, id=70843, stack(0x0000700000014000,0x000070000003c000)]
+  0x000000012cd31800 JavaThread "Recommenders-Timeout-Manager" [_thread_blocked, id=70607, stack(0x000070000019d000,0x000070000029d000)]
+  0x0000000101169000 JavaThread "Timer-0" daemon [_thread_blocked, id=18723, stack(0x0000700003dd7000,0x0000700003ed7000)]
+  0x000000012d6e1800 JavaThread "com.google.inject.internal.util.$Finalizer" daemon [_thread_blocked, id=72251, stack(0x0000700002306000,0x0000700002406000)]
+  0x000000010125b000 JavaThread "org.eclipse.jdt.internal.ui.text.JavaReconciler" daemon [_thread_blocked, id=43283, stack(0x0000700003233000,0x0000700003333000)]
+  0x0000000101a64000 JavaThread "org.eclipse.jdt.internal.ui.text.JavaReconciler" daemon [_thread_blocked, id=89631, stack(0x0000700001e77000,0x0000700001f77000)]
+  0x000000012d288000 JavaThread "[ThreadPool Manager] - Idle Thread" daemon [_thread_blocked, id=41527, stack(0x0000700003cd4000,0x0000700003dd4000)]
+  0x000000012ce82000 JavaThread "Process monitor" daemon [_thread_blocked, id=94211, stack(0x0000700003b4e000,0x0000700003c4e000)]
+  0x0000000123027800 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=93699, stack(0x0000700003a4b000,0x0000700003b4b000)]
+  0x0000000126da9000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=93187, stack(0x0000700003948000,0x0000700003a48000)]
+  0x000000012344e000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=92683, stack(0x0000700003845000,0x0000700003945000)]
+  0x0000000123177800 JavaThread "process reaper" daemon [_thread_in_native, id=92279, stack(0x0000700001356000,0x000070000137e000)]
+  0x0000000102a1d000 JavaThread "Provisioning Event Dispatcher" daemon [_thread_blocked, id=11047, stack(0x0000700003742000,0x0000700003842000)]
+  0x000000012d039000 JavaThread "Thread-10" [_thread_blocked, id=88655, stack(0x000070000363f000,0x000070000373f000)]
+  0x000000012d27a800 JavaThread "Worker-25" [_thread_blocked, id=88067, stack(0x000070000353c000,0x000070000363c000)]
+  0x000000010119c800 JavaThread "Worker-19" [_thread_blocked, id=84995, stack(0x0000700002f2a000,0x000070000302a000)]
+  0x000000010119b800 JavaThread "Worker-18" [_thread_blocked, id=84483, stack(0x0000700002e27000,0x0000700002f27000)]
+  0x000000012d415800 JavaThread "Worker-17" [_thread_blocked, id=83971, stack(0x0000700002d24000,0x0000700002e24000)]
+  0x0000000101199000 JavaThread "Worker-14" [_thread_blocked, id=82435, stack(0x0000700002a1b000,0x0000700002b1b000)]
+  0x000000012cb93800 JavaThread "Worker-11" [_thread_blocked, id=81411, stack(0x0000700002815000,0x0000700002915000)]
+  0x0000000101324000 JavaThread "Worker-6" [_thread_blocked, id=77571, stack(0x0000700002409000,0x0000700002509000)]
+  0x0000000122403800 JavaThread "Java indexing" daemon [_thread_blocked, id=69979, stack(0x0000700001cf1000,0x0000700001df1000)]
+  0x000000012cca5000 JavaThread "EventAdmin Async Event Dispatcher Thread" daemon [_thread_blocked, id=69687, stack(0x0000700001bee000,0x0000700001cee000)]
+  0x00000001262aa800 JavaThread "Bundle File Closer" daemon [_thread_blocked, id=69383, stack(0x00007000019e8000,0x0000700001ae8000)]
+  0x0000000102b62800 JavaThread "EMF Reference Cleaner" daemon [_thread_blocked, id=51719, stack(0x00007000016df000,0x00007000017df000)]
+  0x0000000100c36000 JavaThread "Worker-JM" [_thread_blocked, id=50211, stack(0x00007000014d9000,0x00007000015d9000)]
+  0x00000001011e2000 JavaThread "[Timer] - Main Queue Handler" daemon [_thread_blocked, id=51219, stack(0x00007000013d6000,0x00007000014d6000)]
+  0x000000010116a000 JavaThread "Start Level: Equinox Container: 00a8a566-0ce9-0015-1b97-e9a2b156f923" daemon [_thread_blocked, id=44547, stack(0x00007000011d0000,0x00007000012d0000)]
+  0x000000010116b000 JavaThread "Framework Event Dispatcher: Equinox Container: 00a8a566-0ce9-0015-1b97-e9a2b156f923" daemon [_thread_blocked, id=44035, stack(0x00007000010cd000,0x00007000011cd000)]
+  0x0000000101a46800 JavaThread "Active Thread: Equinox Container: 00a8a566-0ce9-0015-1b97-e9a2b156f923" [_thread_blocked, id=43783, stack(0x0000700000fca000,0x00007000010ca000)]
+  0x000000010082e000 JavaThread "Service Thread" daemon [_thread_blocked, id=28419, stack(0x0000700000dc4000,0x0000700000ec4000)]
+  0x000000010082b000 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=27907, stack(0x0000700000cc1000,0x0000700000dc1000)]
+  0x000000010082a800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=27395, stack(0x0000700000bbe000,0x0000700000cbe000)]
+  0x000000010084d000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=26883, stack(0x0000700000abb000,0x0000700000bbb000)]
+  0x0000000101862800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=26123, stack(0x00007000009b8000,0x0000700000ab8000)]
+  0x000000010281a000 JavaThread "Finalizer" daemon [_thread_blocked, id=25347, stack(0x00007000008b5000,0x00007000009b5000)]
+  0x0000000100846800 JavaThread "Reference Handler" daemon [_thread_blocked, id=24835, stack(0x00007000007b2000,0x00007000008b2000)]
+=>0x0000000101808800 JavaThread "main" [_thread_in_native, id=5643, stack(0x00007fff5f400000,0x00007fff5fc00000)]
+
+Other Threads:
+  0x0000000101848800 VMThread [stack: 0x00007000006af000,0x00007000007af000] [id=24323]
+  0x000000010082e800 WatcherThread [stack: 0x0000700000ec7000,0x0000700000fc7000] [id=28931]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 81408K, used 35972K [0x00000007aab00000, 0x00000007b0000000, 0x00000007c0000000)
+  eden space 75776K, 44% used [0x00000007aab00000,0x00000007acbb49a0,0x00000007af500000)
+  from space 5632K, 44% used [0x00000007af500000,0x00000007af76c668,0x00000007afa80000)
+  to   space 5632K, 0% used [0x00000007afa80000,0x00000007afa80000,0x00000007b0000000)
+ ParOldGen       total 469504K, used 122282K [0x0000000780000000, 0x000000079ca80000, 0x00000007aab00000)
+  object space 469504K, 26% used [0x0000000780000000,0x000000078776aab8,0x000000079ca80000)
+ Metaspace       used 114758K, capacity 123932K, committed 124052K, reserved 1157120K
+  class space    used 13057K, capacity 16004K, committed 16020K, reserved 1048576K
+
+Card table byte_map: [0x0000000115547000,0x0000000115748000] byte_map_base: 0x0000000111947000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000105adce20
+ Begin Bits: [0x000000011589e000, 0x000000011689e000)
+ End Bits:   [0x000000011689e000, 0x000000011789e000)
+
+Polling page: 0x0000000100780000
+
+CodeCache: size=245760Kb used=89256Kb max_used=89576Kb free=156503Kb
+ bounds [0x0000000106187000, 0x000000010b9c7000, 0x0000000115187000]
+ total_blobs=22590 nmethods=21748 adapters=745
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 38845.796 Thread 0x000000010082a800 32282       4       org.eclipse.swt.layout.GridLayout::computeSize (39 bytes)
+Event: 38845.798 Thread 0x000000010082a800 nmethod 32282 0x0000000107f15890 code [0x0000000107f159e0, 0x0000000107f15ac8]
+Event: 38846.140 Thread 0x000000010082b000 32283       3       org.eclipse.ui.internal.registry.RegistryReader::readRegistry (59 bytes)
+Event: 38846.142 Thread 0x000000010082b000 nmethod 32283 0x000000010b582a50 code [0x000000010b582d40, 0x000000010b5847d8]
+Event: 38846.609 Thread 0x000000010082b000 32284       1       org.eclipse.ui.internal.WorkbenchPlugin::getDefault (4 bytes)
+Event: 38846.609 Thread 0x000000010082b000 nmethod 32284 0x000000010742c010 code [0x000000010742c160, 0x000000010742c270]
+Event: 38846.788 Thread 0x000000010082b000 32285       3       org.eclipse.swt.widgets.Control::getBackgroundImage (20 bytes)
+Event: 38846.788 Thread 0x000000010082b000 nmethod 32285 0x0000000108da97d0 code [0x0000000108da9960, 0x0000000108da9c78]
+Event: 38846.892 Thread 0x000000010084d000 32286       4       org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDropAdapter::registerDropListener (11 bytes)
+Event: 38846.898 Thread 0x000000010084d000 nmethod 32286 0x0000000109998690 code [0x00000001099988c0, 0x0000000109998ea8]
+
+GC Heap History (10 events):
+Event: 35266.134 GC heap before
+{Heap before GC invocations=205 (full 4):
+ PSYoungGen      total 80896K, used 78046K [0x00000007aab00000, 0x00000007b0000000, 0x00000007c0000000)
+  eden space 74752K, 100% used [0x00000007aab00000,0x00000007af400000,0x00000007af400000)
+  from space 6144K, 53% used [0x00000007afa00000,0x00000007afd37838,0x00000007b0000000)
+  to   space 6144K, 0% used [0x00000007af400000,0x00000007af400000,0x00000007afa00000)
+ ParOldGen       total 469504K, used 122194K [0x0000000780000000, 0x000000079ca80000, 0x00000007aab00000)
+  object space 469504K, 26% used [0x0000000780000000,0x0000000787754ab8,0x000000079ca80000)
+ Metaspace       used 114731K, capacity 123868K, committed 124052K, reserved 1157120K
+  class space    used 13057K, capacity 16004K, committed 16020K, reserved 1048576K
+Event: 35266.147 GC heap after
+Heap after GC invocations=205 (full 4):
+ PSYoungGen      total 80896K, used 3313K [0x00000007aab00000, 0x00000007b0000000, 0x00000007c0000000)
+  eden space 74752K, 0% used [0x00000007aab00000,0x00000007aab00000,0x00000007af400000)
+  from space 6144K, 53% used [0x00000007af400000,0x00000007af73c668,0x00000007afa00000)
+  to   space 6144K, 0% used [0x00000007afa00000,0x00000007afa00000,0x00000007b0000000)
+ ParOldGen       total 469504K, used 122226K [0x0000000780000000, 0x000000079ca80000, 0x00000007aab00000)
+  object space 469504K, 26% used [0x0000000780000000,0x000000078775cab8,0x000000079ca80000)
+ Metaspace       used 114731K, capacity 123868K, committed 124052K, reserved 1157120K
+  class space    used 13057K, capacity 16004K, committed 16020K, reserved 1048576K
+}
+Event: 38139.545 GC heap before
+{Heap before GC invocations=206 (full 4):
+ PSYoungGen      total 80896K, used 78065K [0x00000007aab00000, 0x00000007b0000000, 0x00000007c0000000)
+  eden space 74752K, 100% used [0x00000007aab00000,0x00000007af400000,0x00000007af400000)
+  from space 6144K, 53% used [0x00000007af400000,0x00000007af73c668,0x00000007afa00000)
+  to   space 6144K, 0% used [0x00000007afa00000,0x00000007afa00000,0x00000007b0000000)
+ ParOldGen       total 469504K, used 122226K [0x0000000780000000, 0x000000079ca80000, 0x00000007aab00000)
+  object space 469504K, 26% used [0x0000000780000000,0x000000078775cab8,0x000000079ca80000)
+ Metaspace       used 114743K, capacity 123932K, committed 124052K, reserved 1157120K
+  class space    used 13057K, capacity 16004K, committed 16020K, reserved 1048576K
+Event: 38139.553 GC heap after
+Heap after GC invocations=206 (full 4):
+ PSYoungGen      total 81408K, used 3219K [0x00000007aab00000, 0x00000007b0000000, 0x00000007c0000000)
+  eden space 75264K, 0% used [0x00000007aab00000,0x00000007aab00000,0x00000007af480000)
+  from space 6144K, 52% used [0x00000007afa00000,0x00000007afd24ca8,0x00000007b0000000)
+  to   space 5632K, 0% used [0x00000007af480000,0x00000007af480000,0x00000007afa00000)
+ ParOldGen       total 469504K, used 122250K [0x0000000780000000, 0x000000079ca80000, 0x00000007aab00000)
+  object space 469504K, 26% used [0x0000000780000000,0x0000000787762ab8,0x000000079ca80000)
+ Metaspace       used 114743K, capacity 123932K, committed 124052K, reserved 1157120K
+  class space    used 13057K, capacity 16004K, committed 16020K, reserved 1048576K
+}
+Event: 38249.769 GC heap before
+{Heap before GC invocations=207 (full 4):
+ PSYoungGen      total 81408K, used 78483K [0x00000007aab00000, 0x00000007b0000000, 0x00000007c0000000)
+  eden space 75264K, 100% used [0x00000007aab00000,0x00000007af480000,0x00000007af480000)
+  from space 6144K, 52% used [0x00000007afa00000,0x00000007afd24ca8,0x00000007b0000000)
+  to   space 5632K, 0% used [0x00000007af480000,0x00000007af480000,0x00000007afa00000)
+ ParOldGen       total 469504K, used 122250K [0x0000000780000000, 0x000000079ca80000, 0x00000007aab00000)
+  object space 469504K, 26% used [0x0000000780000000,0x0000000787762ab8,0x000000079ca80000)
+ Metaspace       used 114749K, capacity 123932K, committed 124052K, reserved 1157120K
+  class space    used 13057K, capacity 16004K, committed 16020K, reserved 1048576K
+Event: 38249.776 GC heap after
+Heap after GC invocations=207 (full 4):
+ PSYoungGen      total 80896K, used 2465K [0x00000007aab00000, 0x00000007b0000000, 0x00000007c0000000)
+  eden space 75264K, 0% used [0x00000007aab00000,0x00000007aab00000,0x00000007af480000)
+  from space 5632K, 43% used [0x00000007af480000,0x00000007af6e8658,0x00000007afa00000)
+  to   space 5632K, 0% used [0x00000007afa80000,0x00000007afa80000,0x00000007b0000000)
+ ParOldGen       total 469504K, used 122250K [0x0000000780000000, 0x000000079ca80000, 0x00000007aab00000)
+  object space 469504K, 26% used [0x0000000780000000,0x0000000787762ab8,0x000000079ca80000)
+ Metaspace       used 114749K, capacity 123932K, committed 124052K, reserved 1157120K
+  class space    used 13057K, capacity 16004K, committed 16020K, reserved 1048576K
+}
+Event: 38304.663 GC heap before
+{Heap before GC invocations=208 (full 4):
+ PSYoungGen      total 80896K, used 77729K [0x00000007aab00000, 0x00000007b0000000, 0x00000007c0000000)
+  eden space 75264K, 100% used [0x00000007aab00000,0x00000007af480000,0x00000007af480000)
+  from space 5632K, 43% used [0x00000007af480000,0x00000007af6e8658,0x00000007afa00000)
+  to   space 5632K, 0% used [0x00000007afa80000,0x00000007afa80000,0x00000007b0000000)
+ ParOldGen       total 469504K, used 122250K [0x0000000780000000, 0x000000079ca80000, 0x00000007aab00000)
+  object space 469504K, 26% used [0x0000000780000000,0x0000000787762ab8,0x000000079ca80000)
+ Metaspace       used 114753K, capacity 123932K, committed 124052K, reserved 1157120K
+  class space    used 13057K, capacity 16004K, committed 16020K, reserved 1048576K
+Event: 38304.668 GC heap after
+Heap after GC invocations=208 (full 4):
+ PSYoungGen      total 81408K, used 2305K [0x00000007aab00000, 0x00000007b0000000, 0x00000007c0000000)
+  eden space 75776K, 0% used [0x00000007aab00000,0x00000007aab00000,0x00000007af500000)
+  from space 5632K, 40% used [0x00000007afa80000,0x00000007afcc0658,0x00000007b0000000)
+  to   space 5632K, 0% used [0x00000007af500000,0x00000007af500000,0x00000007afa80000)
+ ParOldGen       total 469504K, used 122282K [0x0000000780000000, 0x000000079ca80000, 0x00000007aab00000)
+  object space 469504K, 26% used [0x0000000780000000,0x000000078776aab8,0x000000079ca80000)
+ Metaspace       used 114753K, capacity 123932K, committed 124052K, reserved 1157120K
+  class space    used 13057K, capacity 16004K, committed 16020K, reserved 1048576K
+}
+Event: 38568.443 GC heap before
+{Heap before GC invocations=209 (full 4):
+ PSYoungGen      total 81408K, used 78081K [0x00000007aab00000, 0x00000007b0000000, 0x00000007c0000000)
+  eden space 75776K, 100% used [0x00000007aab00000,0x00000007af500000,0x00000007af500000)
+  from space 5632K, 40% used [0x00000007afa80000,0x00000007afcc0658,0x00000007b0000000)
+  to   space 5632K, 0% used [0x00000007af500000,0x00000007af500000,0x00000007afa80000)
+ ParOldGen       total 469504K, used 122282K [0x0000000780000000, 0x000000079ca80000, 0x00000007aab00000)
+  object space 469504K, 26% used [0x0000000780000000,0x000000078776aab8,0x000000079ca80000)
+ Metaspace       used 114753K, capacity 123932K, committed 124052K, reserved 1157120K
+  class space    used 13057K, capacity 16004K, committed 16020K, reserved 1048576K
+Event: 38568.454 GC heap after
+Heap after GC invocations=209 (full 4):
+ PSYoungGen      total 81408K, used 2481K [0x00000007aab00000, 0x00000007b0000000, 0x00000007c0000000)
+  eden space 75776K, 0% used [0x00000007aab00000,0x00000007aab00000,0x00000007af500000)
+  from space 5632K, 44% used [0x00000007af500000,0x00000007af76c668,0x00000007afa80000)
+  to   space 5632K, 0% used [0x00000007afa80000,0x00000007afa80000,0x00000007b0000000)
+ ParOldGen       total 469504K, used 122282K [0x0000000780000000, 0x000000079ca80000, 0x00000007aab00000)
+  object space 469504K, 26% used [0x0000000780000000,0x000000078776aab8,0x000000079ca80000)
+ Metaspace       used 114753K, capacity 123932K, committed 124052K, reserved 1157120K
+  class space    used 13057K, capacity 16004K, committed 16020K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 24266.617 Thread 0x0000000101808800 Uncommon trap: reason=null_check action=make_not_entrant pc=0x00000001089d4b54 method=org.eclipse.e4.ui.internal.workbench.swt.ShellActivationListener.handleEvent(Lorg/eclipse/swt/widgets/Event;)V @ 4
+Event: 24274.458 Thread 0x0000000101808800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x000000010b77a5e8 method=org.eclipse.swt.widgets.Display.windowProc(JJJ)J @ 526
+Event: 24274.495 Thread 0x0000000101808800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x000000010b77a5b0 method=org.eclipse.swt.widgets.Display.windowProc(JJJ)J @ 746
+Event: 24274.495 Thread 0x0000000101808800 Uncommon trap: reason=unloaded action=reinterpret pc=0x000000010ad30544 method=org.eclipse.swt.widgets.TypedListener.handleEvent(Lorg/eclipse/swt/widgets/Event;)V @ 759
+Event: 24274.927 Thread 0x0000000101808800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000000010b7794f4 method=org.eclipse.swt.widgets.Display.windowProc(JJJ)J @ 557
+Event: 24274.928 Thread 0x0000000101808800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000109083000 method=org.eclipse.swt.widgets.Widget.setInputState(Lorg/eclipse/swt/widgets/Event;Lorg/eclipse/swt/internal/cocoa/NSEvent;I)Z @ 380
+Event: 24274.928 Thread 0x0000000101808800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000000010b3a7388 method=org.eclipse.swt.custom.CTabFolder.onMouse(Lorg/eclipse/swt/widgets/Event;)V @ 1009
+Event: 24475.047 Thread 0x0000000100f4c800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x000000010af7abb0 method=org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendFieldLabel(Lorg/eclipse/jdt/core/IField;J)V @ 11
+Event: 24475.932 Thread 0x0000000101808800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x000000010718df68 method=org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchSelectionChanged(Lorg/eclipse/jface/viewers/ISelection;)V @ 9
+Event: 24477.794 Thread 0x0000000101808800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x0000000108de8720 method=org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchSelectionChanged(Lorg/eclipse/jface/viewers/ISelection;)V @ 9
+
+Internal exceptions (10 events):
+Event: 14770.161 Thread 0x000000012d696000 Exception <a 'java/lang/InterruptedException'> (0x00000007ac8323e8) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u60/4407/hotspot/src/share/vm/runtime/objectMonitor.cpp, line 1683]
+Event: 14774.473 Thread 0x0000000101808800 Implicit null exception at 0x000000010915cc43 to 0x000000010915d751
+Event: 14774.473 Thread 0x0000000101808800 Implicit null exception at 0x0000000108ca25bd to 0x0000000108ca316d
+Event: 14893.286 Thread 0x000000012d4e9000 Exception <a 'java/lang/InterruptedException'> (0x00000007ad5ab1b8) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u60/4407/hotspot/src/share/vm/runtime/objectMonitor.cpp, line 1683]
+Event: 14912.196 Thread 0x0000000122054000 Exception <a 'java/lang/InterruptedException'> (0x00000007ab1319e8) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u60/4407/hotspot/src/share/vm/runtime/objectMonitor.cpp, line 1683]
+Event: 15852.391 Thread 0x000000012348e000 Exception <a 'java/lang/InterruptedException'> (0x00000007ad36e518) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u60/4407/hotspot/src/share/vm/runtime/objectMonitor.cpp, line 1683]
+Event: 15975.179 Thread 0x000000012348e000 Exception <a 'java/lang/InterruptedException'> (0x00000007aaf12bd0) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u60/4407/hotspot/src/share/vm/runtime/objectMonitor.cpp, line 1683]
+Event: 24266.616 Thread 0x0000000101808800 Implicit null exception at 0x000000010b2d881c to 0x000000010b2dc079
+Event: 24266.617 Thread 0x0000000101808800 Implicit null exception at 0x00000001089d477a to 0x00000001089d4b45
+Event: 24759.952 Thread 0x000000012cef1000 Exception <a 'java/lang/InterruptedException'> (0x00000007abbf5e60) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u60/4407/hotspot/src/share/vm/runtime/objectMonitor.cpp, line 1683]
+
+Events (10 events):
+Event: 38844.636 Executing VM operation: RevokeBias done
+Event: 38844.636 Thread 0x0000000101c15000 Thread exited: 0x0000000101c15000
+Event: 38845.799 Thread 0x000000010082a800 flushing nmethod 0x0000000109308150
+Event: 38845.799 Thread 0x000000010082a800 flushing nmethod 0x0000000109311750
+Event: 38846.140 Thread 0x0000000101808800 DEOPT PACKING pc=0x0000000109f13188 sp=0x00007fff5fbfdbf0
+Event: 38846.140 Thread 0x0000000101808800 DEOPT UNPACKING pc=0x00000001061ce633 sp=0x00007fff5fbfd940 mode 0
+Event: 38846.142 Thread 0x000000010082b000 flushing nmethod 0x0000000109810510
+Event: 38846.143 Thread 0x000000010082b000 flushing nmethod 0x0000000109998590
+Event: 38846.144 Thread 0x000000010082b000 flushing nmethod 0x0000000109ce5110
+Event: 38846.612 Thread 0x000000010082b000 flushing nmethod 0x000000010a5ff490
+
+
+Dynamic libraries:
+0x0000000008aa8000 	/System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa
+0x0000000008aa8000 	/usr/lib/libSystem.B.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
+0x0000000008aa8000 	/usr/lib/libobjc.A.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+0x0000000008aa8000 	/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+0x0000000008aa8000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
+0x0000000008aa8000 	/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+0x0000000008aa8000 	/System/Library/Frameworks/CoreData.framework/Versions/A/CoreData
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/RemoteViewServices.framework/Versions/A/RemoteViewServices
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/UIFoundation.framework/Versions/A/UIFoundation
+0x0000000008aa8000 	/usr/lib/libScreenReader.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate
+0x0000000008aa8000 	/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface
+0x0000000008aa8000 	/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
+0x0000000008aa8000 	/System/Library/Frameworks/AudioUnit.framework/Versions/A/AudioUnit
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/DataDetectorsCore.framework/Versions/A/DataDetectorsCore
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Versions/A/DesktopServicesPriv
+0x0000000008aa8000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+0x0000000008aa8000 	/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+0x0000000008aa8000 	/System/Library/Frameworks/Security.framework/Versions/A/Security
+0x0000000008aa8000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SpeechRecognition.framework/Versions/A/SpeechRecognition
+0x0000000008aa8000 	/usr/lib/libauto.dylib
+0x0000000008aa8000 	/usr/lib/libicucore.A.dylib
+0x0000000008aa8000 	/usr/lib/libxml2.2.dylib
+0x0000000008aa8000 	/usr/lib/libz.1.dylib
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/CoreUI
+0x0000000008aa8000 	/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio
+0x0000000008aa8000 	/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+0x0000000008aa8000 	/usr/lib/liblangid.dylib
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/A/MultitouchSupport
+0x0000000008aa8000 	/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+0x0000000008aa8000 	/usr/lib/libDiagnosticMessagesClient.dylib
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/PerformanceAnalysis.framework/Versions/A/PerformanceAnalysis
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/GenerationalStorage.framework/Versions/A/GenerationalStorage
+0x0000000008aa8000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/Sharing.framework/Versions/A/Sharing
+0x0000000008aa8000 	/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
+0x0000000008aa8000 	/System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage
+0x0000000008aa8000 	/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText
+0x0000000008aa8000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/Backup.framework/Versions/A/Backup
+0x0000000008aa8000 	/usr/lib/libextension.dylib
+0x0000000008aa8000 	/usr/lib/libarchive.2.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork
+0x0000000008aa8000 	/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration
+0x0000000008aa8000 	/usr/lib/libCRFSuite.dylib
+0x0000000008aa8000 	/usr/lib/libc++.1.dylib
+0x0000000008aa8000 	/usr/lib/libc++abi.dylib
+0x0000000008aa8000 	/usr/lib/system/libcache.dylib
+0x0000000008aa8000 	/usr/lib/system/libcommonCrypto.dylib
+0x0000000008aa8000 	/usr/lib/system/libcompiler_rt.dylib
+0x0000000008aa8000 	/usr/lib/system/libcopyfile.dylib
+0x0000000008aa8000 	/usr/lib/system/libcorecrypto.dylib
+0x0000000008aa8000 	/usr/lib/system/libdispatch.dylib
+0x0000000008aa8000 	/usr/lib/system/libdyld.dylib
+0x0000000008aa8000 	/usr/lib/system/libkeymgr.dylib
+0x0000000008aa8000 	/usr/lib/system/liblaunch.dylib
+0x0000000008aa8000 	/usr/lib/system/libmacho.dylib
+0x0000000008aa8000 	/usr/lib/system/libquarantine.dylib
+0x0000000008aa8000 	/usr/lib/system/libremovefile.dylib
+0x0000000008aa8000 	/usr/lib/system/libsystem_asl.dylib
+0x0000000008aa8000 	/usr/lib/system/libsystem_blocks.dylib
+0x0000000008aa8000 	/usr/lib/system/libsystem_c.dylib
+0x0000000008aa8000 	/usr/lib/system/libsystem_configuration.dylib
+0x0000000008aa8000 	/usr/lib/system/libsystem_coreservices.dylib
+0x0000000008aa8000 	/usr/lib/system/libsystem_coretls.dylib
+0x0000000008aa8000 	/usr/lib/system/libsystem_dnssd.dylib
+0x0000000008aa8000 	/usr/lib/system/libsystem_info.dylib
+0x0000000008aa8000 	/usr/lib/system/libsystem_kernel.dylib
+0x0000000008aa8000 	/usr/lib/system/libsystem_m.dylib
+0x0000000008aa8000 	/usr/lib/system/libsystem_malloc.dylib
+0x0000000008aa8000 	/usr/lib/system/libsystem_network.dylib
+0x0000000008aa8000 	/usr/lib/system/libsystem_networkextension.dylib
+0x0000000008aa8000 	/usr/lib/system/libsystem_notify.dylib
+0x0000000008aa8000 	/usr/lib/system/libsystem_platform.dylib
+0x0000000008aa8000 	/usr/lib/system/libsystem_pthread.dylib
+0x0000000008aa8000 	/usr/lib/system/libsystem_sandbox.dylib
+0x0000000008aa8000 	/usr/lib/system/libsystem_secinit.dylib
+0x0000000008aa8000 	/usr/lib/system/libsystem_trace.dylib
+0x0000000008aa8000 	/usr/lib/system/libunc.dylib
+0x0000000008aa8000 	/usr/lib/system/libunwind.dylib
+0x0000000008aa8000 	/usr/lib/system/libxpc.dylib
+0x0000000008aa8000 	/usr/lib/libenergytrace.dylib
+0x0000000008aa8000 	/usr/lib/libbsm.0.dylib
+0x0000000008aa8000 	/usr/lib/system/libkxld.dylib
+0x0000000008aa8000 	/usr/lib/libxar.1.dylib
+0x0000000008aa8000 	/usr/lib/libsqlite3.dylib
+0x0000000008aa8000 	/usr/lib/libpam.2.dylib
+0x0000000008aa8000 	/usr/lib/libOpenScriptingUtil.dylib
+0x0000000008aa8000 	/usr/lib/libbz2.1.0.dylib
+0x0000000008aa8000 	/usr/lib/liblzma.5.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/FSEvents
+0x0000000008aa8000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+0x0000000008aa8000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata
+0x0000000008aa8000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices
+0x0000000008aa8000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit
+0x0000000008aa8000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+0x0000000008aa8000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+0x0000000008aa8000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices
+0x0000000008aa8000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SharedFileList.framework/Versions/A/SharedFileList
+0x0000000008aa8000 	/System/Library/Frameworks/NetFS.framework/Versions/A/NetFS
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/NetAuth.framework/Versions/A/NetAuth
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/login.framework/Versions/A/Frameworks/loginsupport.framework/Versions/A/loginsupport
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/TCC.framework/Versions/A/TCC
+0x0000000008aa8000 	/usr/lib/libmecabra.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+0x0000000008aa8000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+0x0000000008aa8000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+0x0000000008aa8000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/LangAnalysis
+0x0000000008aa8000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore
+0x0000000008aa8000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+0x0000000008aa8000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesis
+0x0000000008aa8000 	/System/Library/Frameworks/Metal.framework/Versions/A/Metal
+0x0000000008aa8000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage
+0x0000000008aa8000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib
+0x0000000008aa8000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvDSP.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvMisc.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLinearAlgebra.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparseBLAS.dylib
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/GPUCompiler.framework/libmetal_timestamp.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreFSCache.dylib
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/IOAccelerator.framework/Versions/A/IOAccelerator
+0x0000000008aa8000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/libFontParser.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/libFontRegistry.dylib
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/AppleVPA.framework/Versions/A/AppleVPA
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/AppleJPEG.framework/Versions/A/AppleJPEG
+0x0000000008aa8000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJPEG.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libTIFF.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libPng.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libGIF.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libRadiance.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+0x0000000008aa8000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGFXShared.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLImage.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCVMSPluginSupport.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreVMClient.dylib
+0x0000000008aa8000 	/usr/lib/libcups.2.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/Kerberos.framework/Versions/A/Kerberos
+0x0000000008aa8000 	/System/Library/Frameworks/GSS.framework/Versions/A/GSS
+0x0000000008aa8000 	/usr/lib/libresolv.9.dylib
+0x0000000008aa8000 	/usr/lib/libiconv.2.dylib
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/Heimdal.framework/Versions/A/Heimdal
+0x0000000008aa8000 	/usr/lib/libheimdal-asn1.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/OpenDirectory.framework/Versions/A/OpenDirectory
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/CommonAuth.framework/Versions/A/CommonAuth
+0x0000000008aa8000 	/System/Library/Frameworks/OpenDirectory.framework/Versions/A/Frameworks/CFOpenDirectory.framework/Versions/A/CFOpenDirectory
+0x0000000008aa8000 	/System/Library/Frameworks/SecurityFoundation.framework/Versions/A/SecurityFoundation
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/LanguageModeling.framework/Versions/A/LanguageModeling
+0x0000000008aa8000 	/usr/lib/libmarisa.dylib
+0x0000000008aa8000 	/usr/lib/libChineseTokenizer.dylib
+0x0000000008aa8000 	/usr/lib/libcmph.dylib
+0x0000000008aa8000 	/usr/lib/libcompression.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/ServiceManagement.framework/Versions/A/ServiceManagement
+0x0000000008aa8000 	/usr/lib/libxslt.1.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Ink.framework/Versions/A/Ink
+0x0000000008aa8000 	/usr/lib/libFosl_dynamic.dylib
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/FaceCore.framework/Versions/A/FaceCore
+0x0000000008aa8000 	/System/Library/Frameworks/OpenCL.framework/Versions/A/OpenCL
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/CrashReporterSupport.framework/Versions/A/CrashReporterSupport
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/IconServices.framework/Versions/A/IconServices
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Apple80211
+0x0000000008aa8000 	/System/Library/Frameworks/CoreWLAN.framework/Versions/A/CoreWLAN
+0x0000000008aa8000 	/System/Library/Frameworks/IOBluetooth.framework/Versions/A/IOBluetooth
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/CoreWiFi.framework/Versions/A/CoreWiFi
+0x0000000008aa8000 	/System/Library/Frameworks/CoreBluetooth.framework/Versions/A/CoreBluetooth
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/ChunkingLibrary.framework/Versions/A/ChunkingLibrary
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/DebugSymbols.framework/Versions/A/DebugSymbols
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/CoreSymbolication.framework/Versions/A/CoreSymbolication
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/Symbolication.framework/Versions/A/Symbolication
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/SpeechRecognitionCore.framework/Versions/A/SpeechRecognitionCore
+0x000000010003b000 	/System/Library/CoreServices/Encodings/libSimplifiedChineseConverter.dylib
+0x00000001000ce000 	/Users/BaoHan/Desktop/GRP/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.equinox.launcher.cocoa.macosx.x86_64_1.1.300.v20150602-1417/eclipse_1611.so
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/CoreServicesInternal.framework/Versions/A/CoreServicesInternal
+0x000000010072d000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/MacOS/libjli.dylib
+0x00000001051fe000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre//lib/server/libjvm.dylib
+0x0000000008aa8000 	/usr/lib/libstdc++.6.dylib
+0x000000010073d000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/libverify.dylib
+0x000000010074b000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/libjava.dylib
+0x0000000100789000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/libzip.dylib
+0x0000000119524000 	/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/JavaRuntimeSupport
+0x000000011953f000 	/System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaNativeFoundation.framework/Versions/A/JavaNativeFoundation
+0x00000001007ef000 	/System/Library/Frameworks/JavaVM.framework/Versions/A/JavaVM
+0x0000000008aa8000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
+0x0000000119554000 	/System/Library/PrivateFrameworks/JavaLaunching.framework/Versions/A/JavaLaunching
+0x0000000008aa8000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/CommonPanels.framework/Versions/A/CommonPanels
+0x0000000008aa8000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Help.framework/Versions/A/Help
+0x0000000008aa8000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/ImageCapture.framework/Versions/A/ImageCapture
+0x0000000008aa8000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/OpenScripting.framework/Versions/A/OpenScripting
+0x0000000008aa8000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Print.framework/Versions/A/Print
+0x0000000008aa8000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SecurityHI.framework/Versions/A/SecurityHI
+0x0000000008aa8000 	/System/Library/CoreServices/RawCamera.bundle/Contents/MacOS/RawCamera
+0x0000000008aa8000 	/System/Library/Frameworks/CoreGraphics.framework/Versions/A/Resources/libRIP.A.dylib
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/FamilyControls.framework/Versions/A/FamilyControls
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Frameworks/CommerceCore.framework/Versions/A/CommerceCore
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/SystemAdministration.framework/Versions/A/SystemAdministration
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/AppContainer.framework/Versions/A/AppContainer
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/SecCodeWrapper.framework/Versions/A/SecCodeWrapper
+0x0000000008aa8000 	/System/Library/Frameworks/DirectoryService.framework/Versions/A/DirectoryService
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/DiskImages.framework/Versions/A/DiskImages
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/LoginUIKit.framework/Versions/A/Frameworks/LoginUICore.framework/Versions/A/LoginUICore
+0x0000000008aa8000 	/usr/lib/libCoreStorage.dylib
+0x0000000008aa8000 	/usr/lib/libcsfde.dylib
+0x0000000008aa8000 	/usr/lib/libodfde.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/DiscRecording.framework/Versions/A/DiscRecording
+0x0000000008aa8000 	/usr/lib/libcurl.4.dylib
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/MediaKit.framework/Versions/A/MediaKit
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/ProtectedCloudStorage.framework/Versions/A/ProtectedCloudStorage
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/EFILogin.framework/Versions/A/EFILogin
+0x0000000008aa8000 	/usr/lib/libutil.dylib
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/FindMyDevice.framework/Versions/A/FindMyDevice
+0x0000000008aa8000 	/System/Library/Frameworks/LDAP.framework/Versions/A/LDAP
+0x0000000008aa8000 	/usr/lib/libsasl2.2.dylib
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/CoreDaemon.framework/Versions/B/CoreDaemon
+0x0000000008aa8000 	/usr/lib/libcrypto.0.9.8.dylib
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/AppleSRP.framework/Versions/A/AppleSRP
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/TrustEvaluationAgent.framework/Versions/A/TrustEvaluationAgent
+0x0000000008aa8000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/Libraries/libCGInterfaces.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCGXType.A.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/OpenCL.framework/Versions/A/Libraries/libcldcpuengine.dylib
+0x000000011bb10000 	cl_kernels
+0x0000000008aa8000 	/System/Library/Frameworks/OpenCL.framework/Versions/A/Libraries/ImageFormats/unorm8_bgra.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/OpenCL.framework/Versions/A/Libraries/ImageFormats/unorm8_rgba.dylib
+0x000000011968c000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/libnet.dylib
+0x00000001196a3000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/libnio.dylib
+0x000000011b891000 	/Users/BaoHan/Desktop/GRP/Eclipse.app/Contents/Eclipse/configuration/org.eclipse.osgi/377/0/.cp/libswt-cocoa-4527.jnilib
+0x0000000008aa8000 	/System/Library/Frameworks/WebKit.framework/Versions/A/WebKit
+0x0000000008aa8000 	/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/JavaScriptCore
+0x0000000008aa8000 	/System/Library/Frameworks/SecurityInterface.framework/Versions/A/SecurityInterface
+0x0000000008aa8000 	/System/Library/Frameworks/WebKit.framework/Versions/A/Frameworks/WebKitLegacy.framework/Versions/A/WebKitLegacy
+0x0000000008aa8000 	/System/Library/Frameworks/WebKit.framework/Versions/A/Frameworks/WebCore.framework/Versions/A/WebCore
+0x000000011b8de000 	/Users/BaoHan/Desktop/GRP/Eclipse.app/Contents/Eclipse/configuration/org.eclipse.osgi/377/0/.cp/libswt-pi-cocoa-4527.jnilib
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/CloudDocs.framework/Versions/A/CloudDocs
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/CoreDuet.framework/Versions/A/CoreDuet
+0x0000000008aa8000 	/System/Library/Frameworks/CloudKit.framework/Versions/A/CloudKit
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/CoreDuetDaemonProtocol.framework/Versions/A/CoreDuetDaemonProtocol
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/CoreDuetDebugLogging.framework/Versions/A/CoreDuetDebugLogging
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/MMCS.framework/Versions/A/MMCS
+0x0000000008aa8000 	/System/Library/Frameworks/CoreLocation.framework/Versions/A/CoreLocation
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/AssetCacheServices.framework/Versions/A/AssetCacheServices
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/GeoServices
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/DataDetectors.framework/Versions/A/DataDetectors
+0x0000000008aa8000 	/System/Library/Frameworks/AddressBook.framework/Versions/A/AddressBook
+0x0000000008aa8000 	/System/Library/Frameworks/Quartz.framework/Versions/A/Quartz
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/ContactsPersistence.framework/Versions/A/ContactsPersistence
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/ContactsFoundation.framework/Versions/A/ContactsFoundation
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/vCard.framework/Versions/A/vCard
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/IntlPreferences.framework/Versions/A/IntlPreferences
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/ToneLibrary.framework/Versions/A/ToneLibrary
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/ToneKit.framework/Versions/A/ToneKit
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/ApplePushService.framework/Versions/A/ApplePushService
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/PhoneNumbers.framework/Versions/A/PhoneNumbers
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/ViewBridge.framework/Versions/A/ViewBridge
+0x0000000008aa8000 	/System/Library/Frameworks/AVFoundation.framework/Versions/A/AVFoundation
+0x0000000008aa8000 	/System/Library/Frameworks/AVFoundation.framework/Versions/A/Resources/libAVFAudio.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia
+0x0000000008aa8000 	/System/Library/Frameworks/MediaToolbox.framework/Versions/A/MediaToolbox
+0x0000000008aa8000 	/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox
+0x0000000008aa8000 	/System/Library/Frameworks/CoreMediaIO.framework/Versions/A/CoreMediaIO
+0x0000000008aa8000 	/usr/lib/libspindump.dylib
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/CoreAVCHD.framework/Versions/A/CoreAVCHD
+0x0000000008aa8000 	/System/Library/Frameworks/MediaAccessibility.framework/Versions/A/MediaAccessibility
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/Mangrove.framework/Versions/A/Mangrove
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/CoreAUC.framework/Versions/A/CoreAUC
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/AppleVA.framework/Versions/A/AppleVA
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/XPCService.framework/Versions/A/XPCService
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/AppSandbox.framework/Versions/A/AppSandbox
+0x0000000008aa8000 	/usr/lib/libsandbox.1.dylib
+0x0000000008aa8000 	/usr/lib/libMatch.1.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/QuartzComposer.framework/Versions/A/QuartzComposer
+0x0000000008aa8000 	/System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/PDFKit.framework/Versions/A/PDFKit
+0x0000000008aa8000 	/System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/QuartzFilters.framework/Versions/A/QuartzFilters
+0x0000000008aa8000 	/System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/ImageKit.framework/Versions/A/ImageKit
+0x0000000008aa8000 	/System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/QuickLookUI.framework/Versions/A/QuickLookUI
+0x0000000008aa8000 	/System/Library/Frameworks/QTKit.framework/Versions/A/QTKit
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/AppleSystemInfo.framework/Versions/A/AppleSystemInfo
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/CoreMediaAuthoring.framework/Versions/A/CoreMediaAuthoring
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/CorePDF.framework/Versions/A/CorePDF
+0x0000000008aa8000 	/System/Library/Frameworks/QuickLook.framework/Versions/A/QuickLook
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/DisplayServices.framework/Versions/A/DisplayServices
+0x0000000008aa8000 	/System/Library/Frameworks/ImageCaptureCore.framework/Versions/A/ImageCaptureCore
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/SafariServices.framework/Versions/A/SafariServices
+0x00000001196be000 	/Users/BaoHan/Desktop/GRP/Eclipse.app/Contents/Eclipse/configuration/org.eclipse.osgi/73/0/.cp/os/macosx/libunixfile_1_0_0.jnilib
+0x0000000127000000 	/System/Library/Extensions/AppleIntelHD5000GraphicsMTLDriver.bundle/Contents/MacOS/AppleIntelHD5000GraphicsMTLDriver
+0x0000000008aa8000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Resources/GLEngine.bundle/GLEngine
+0x0000000008aa8000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLProgrammability.dylib
+0x0000000127897000 	/System/Library/Extensions/AppleIntelHD5000GraphicsGLDriver.bundle/Contents/MacOS/AppleIntelHD5000GraphicsGLDriver
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/GPUSupport.framework/Versions/A/Libraries/libGPUSupportMercury.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Resources/GLRendererFloat.bundle/GLRendererFloat
+0x000000011ba69000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/libsunec.dylib
+0x0000000008aa8000 	/System/Library/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCGXCoreImage.A.dylib
+0x000000011b886000 	cl_kernels
+0x000000011aada000 	cl_kernels
+0x00000001215c7000 	/System/Library/PrivateFrameworks/WebContentAnalysis.framework/WebContentAnalysis
+0x0000000008aa8000 	/System/Library/Frameworks/LatentSemanticMapping.framework/Versions/A/LatentSemanticMapping
+0x0000000008aa8000 	/System/Library/Frameworks/NetworkExtension.framework/Versions/A/NetworkExtension
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/Network.framework/Versions/A/Network
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/EAP8021X.framework/Versions/A/EAP8021X
+0x0000000008aa8000 	/usr/lib/libnetwork.dylib
+0x000000011ba5c000 	/usr/lib/libgermantok.dylib
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/Shortcut.framework/Versions/A/Shortcut
+0x0000000008aa8000 	/System/Library/PrivateFrameworks/HelpData.framework/Versions/A/HelpData
+0x0000000008aa8000 	/usr/lib/libtidy.A.dylib
+0x000000013229b000 	//usr/lib/libmecab.dylib
+0x0000000104eae000 	/System/Library/PrivateFrameworks/Lookup.framework/Lookup
+
+VM Arguments:
+jvm_args: -Dosgi.requiredJavaVersion=1.7 -XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts -XX:MaxPermSize=256m -Xms256m -Xmx1024m -Xdock:icon=../Resources/Eclipse.icns -XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts 
+java_command: <unknown>
+java_class_path (initial): /Users/BaoHan/Desktop/GRP/Eclipse.app/Contents/MacOS//../Eclipse/plugins/org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar
+Launcher Type: generic
+
+Environment Variables:
+PATH=/usr/bin:/bin:/usr/sbin:/sbin
+SHELL=/bin/bash
+DISPLAY=/private/tmp/com.apple.launchd.jRybax5vSt/org.macosforge.xquartz:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.dylib+0x5a6d31], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_ONSTACK|SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.dylib+0x5a6d31], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.dylib+0x480a4c], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.dylib+0x480a4c], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.dylib+0x480a4c], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.dylib+0x480a4c], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.dylib+0x48056a], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.dylib+0x47eb41], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.dylib+0x47eb41], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.dylib+0x47eb41], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.dylib+0x47eb41], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Bsduname:Darwin 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015; root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64
+rlimit: STACK 8192k, CORE 0k, NPROC 709, NOFILE 10240, AS infinity
+load average:2.22 3.93 3.95
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 69 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 8388608k(403408k free)
+
+/proc/meminfo:
+
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.60-b23) for bsd-amd64 JRE (1.8.0_60-b27), built on Aug  4 2015 10:47:24 by "java_re" with gcc 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)
+
+time: Mon Mar 14 19:18:41 2016
+elapsed time: 38847 seconds (0d 10h 47m 27s)
+

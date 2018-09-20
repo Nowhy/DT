@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 8 elements to &apos;Desktop-4/src&apos;&#x0A;- Original project: &apos;Desktop-3&apos;&#x0A;- Destination element: &apos;Desktop-4/src&apos;&#x0A;- Original elements:&#x0A;     ChessPoint.java&#x0A;     ChessBoard.java&#x0A;     UI.java&#x0A;     MoveStep.java&#x0A;     MakeChessManual.java&#x0A;     AI.java&#x0A;     Rule.java&#x0A;     ChessPiece.java" description="Copy compilation units" destination="=Desktop-4/src" element1="/src&lt;{ChessPoint.java" element2="/src&lt;{ChessBoard.java" element3="/src&lt;{UI.java" element4="/src&lt;{MoveStep.java" element5="/src&lt;{MakeChessManual.java" element6="/src&lt;{AI.java" element7="/src&lt;{Rule.java" element8="/src&lt;{ChessPiece.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1459424132566" units="8" version="1.0"/>
+</session>

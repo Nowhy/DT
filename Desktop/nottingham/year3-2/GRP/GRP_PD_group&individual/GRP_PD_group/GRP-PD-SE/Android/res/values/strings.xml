@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Advanced Xiangqi</string>
+    <string name="action_settings">Settings</string>
+  <string name="new_game_label">New game</string>
+  <string name="new_game_title">Advanced Xiangqi</string>
+   <string name="help_label">Help</string>
+    <string name="exit_label">Exit</string>    
+    <string name="help_title">About the app</string>
+    <string name="help_text">Aim of the application\n\nGenerally, in the chess game, the player is the master of the situation. But some defects such as, careless moves, and inequity pieces exchange. Computer will not make this human mistake and could be combined with the player to achieve a better move.\n
+\n\nInstructions\n\nIf your or your competitor’s chess pieces move, you may move the piece in the software interface and make it same to the physical chessboard condition. And then search the move which would be benefit for you.
+	On the other hand, you may simulate the next several moves on the interface and use ‘undo’ button to restore the previous situation. 
+</string>
+ <string name="recommend_title">recommendation and suggestions</string>
+  <string name="undo_label">Undo</string>
+
+</resources>

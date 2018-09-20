@@ -1,0 +1,15 @@
+package newChess;
+
+public class Manage{
+	
+	ChessBoard chessBoard;
+	public void Manage(){
+		chessBoard = new ChessView();
+	}
+	
+	public void start(){
+		
+	}
+	
+	
+}

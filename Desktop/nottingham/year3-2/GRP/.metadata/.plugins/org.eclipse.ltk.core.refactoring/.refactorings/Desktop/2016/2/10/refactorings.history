@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;org.acerge.engine&apos; to &apos;engine/src&apos;&#x0A;- Original project: &apos;Desktop&apos;&#x0A;- Destination element: &apos;engine/src&apos;&#x0A;- Original element: &apos;Desktop/src/org.acerge.engine&apos;" description="Copy package" destination="=engine/src" element1="/src&lt;org.acerge.engine" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1456749440944" version="1.0"/>
+</session>
